@@ -13,6 +13,6 @@ venv/
 *.log
 .pytest_cache/
 .mypy_cache/
-benchmarks/results/*.json
+# benchmarks/results/*.json  # keep benchmark results in repo
 .DS_Store
 Thumbs.db

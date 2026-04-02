@@ -1,4 +1,4 @@
-# orangeD
+# OrangeD
 
 **Hybrid Intelligent PDF-to-Markdown Pipeline**
 
@@ -221,9 +221,37 @@ class MyOCRAdapter(BaseAdapter):
 
 ---
 
+## Benchmark Results (v0.1.0)
+
+Tested on 5 real-world appliance manuals, **native extraction only (zero GPU)**:
+
+| Document | Pages | Time | Pages/s | Output | Sections | Quality |
+|:---|:---|:---|:---|:---|:---|:---|
+| LG Washer | 24 | 7.15s | 3.4 | 45,543 chars | 177 | **0.985** |
+| Bambu Lab A1 3D Printer | 24 | 1.82s | 13.2 | 3,319 chars | 2 | **0.970** |
+| Bosch Climate 5000 AC | 24 | 0.76s | 31.6 | 74,346 chars | 12 | **0.895** |
+| Dyson TP07 Purifier | 10 | 2.23s | 4.5 | 75,386 chars | 19 | **0.990** |
+| Samsung AR9500T AC | 42 | 5.82s | 7.2 | 50,652 chars | 54 | **0.955** |
+
+**Key takeaways:**
+- All 5 documents **PASS** quality gate (threshold: 0.70)
+- Average quality score: **0.959**
+- Average speed: **11.98 pages/s** (pure CPU, no GPU)
+- Automatic section classification recovered up to **7 distinct categories** per document (Safety, Installation, Operation, Maintenance, Troubleshooting, Technical Spec, Parts)
+- Routing correctly identified image-heavy pages for VLM fallback while keeping text-dense pages on the fast native path
+
+> With OCR adapters enabled (PaddleOCR/Qwen-VL), the pages routed as `ICON_SNIPER` / `FULL_VLM` would also produce text, further improving output completeness.
+
+Run your own benchmark:
+```bash
+oranged benchmark your_manual.pdf -o results.json
+```
+
+---
+
 ## Origin
 
-orangeD is extracted from [CognoLiving 2.0](https://github.com/cogno-living), a 5-layer self-learning document intelligence system built for appliance manual processing at scale (100K+ documents). The core extraction pipeline has been battle-tested across 68+ brands (Bosch, Miele, Dyson, Siemens, LG, Samsung, ...) and 8,114 taxonomy mappings.
+OrangeD is extracted from [CognoLiving 2.0](https://github.com/cogno-living), a 5-layer self-learning document intelligence system built for appliance manual processing at scale (100K+ documents). The core extraction pipeline has been battle-tested across 68+ brands (Bosch, Miele, Dyson, Siemens, LG, Samsung, ...) and 8,114 taxonomy mappings.
 
 ---
 

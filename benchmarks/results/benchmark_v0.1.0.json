@@ -1,0 +1,146 @@
+{
+  "timestamp": "2026-04-02T19:28:04",
+  "engine": "orangeD",
+  "version": "0.1.0",
+  "gpu": false,
+  "results": [
+    {
+      "name": "LG Washer (24p)",
+      "pages": 24,
+      "time_s": 7.153,
+      "pages_per_s": 3.4,
+      "chars": 45543,
+      "sections": 177,
+      "figures": 76,
+      "categories": [
+        "INSTALLATION",
+        "MAINTENANCE",
+        "OPERATION",
+        "PARTS",
+        "SAFETY",
+        "TECHNICAL_SPEC",
+        "TROUBLESHOOTING"
+      ],
+      "quality": 0.985,
+      "passed": true,
+      "dimensions": {
+        "format_compliance": 1.0,
+        "heading_hierarchy": 1.0,
+        "content_accuracy": 1.0,
+        "structural_consistency": 1.0,
+        "table_integrity": 0.9
+      },
+      "routing": {
+        "ICON_SNIPER": 19,
+        "SMART_REDUCE": 4,
+        "FULL_VLM": 1
+      }
+    },
+    {
+      "name": "Bambu Lab A1 3D Printer (24p)",
+      "pages": 24,
+      "time_s": 1.82,
+      "pages_per_s": 13.2,
+      "chars": 3319,
+      "sections": 2,
+      "figures": 131,
+      "categories": [],
+      "quality": 0.97,
+      "passed": true,
+      "dimensions": {
+        "format_compliance": 1.0,
+        "heading_hierarchy": 1.0,
+        "content_accuracy": 1.0,
+        "structural_consistency": 0.85,
+        "table_integrity": 1.0
+      },
+      "routing": {
+        "ICON_SNIPER": 19,
+        "FULL_VLM": 4,
+        "TABLE_RESCUE": 1
+      }
+    },
+    {
+      "name": "Bosch Climate 5000 AC (24p)",
+      "pages": 24,
+      "time_s": 0.76,
+      "pages_per_s": 31.6,
+      "chars": 74346,
+      "sections": 12,
+      "figures": 24,
+      "categories": [
+        "TROUBLESHOOTING"
+      ],
+      "quality": 0.895,
+      "passed": true,
+      "dimensions": {
+        "format_compliance": 1.0,
+        "heading_hierarchy": 1.0,
+        "content_accuracy": 0.75,
+        "structural_consistency": 0.85,
+        "table_integrity": 1.0
+      },
+      "routing": {
+        "TABLE_RESCUE": 5,
+        "ICON_SNIPER": 19
+      }
+    },
+    {
+      "name": "Dyson TP07 Purifier (10p)",
+      "pages": 10,
+      "time_s": 2.232,
+      "pages_per_s": 4.5,
+      "chars": 75386,
+      "sections": 19,
+      "figures": 2873,
+      "categories": [
+        "INSTALLATION",
+        "MAINTENANCE"
+      ],
+      "quality": 0.99,
+      "passed": true,
+      "dimensions": {
+        "format_compliance": 1.0,
+        "heading_hierarchy": 1.0,
+        "content_accuracy": 1.0,
+        "structural_consistency": 0.95,
+        "table_integrity": 1.0
+      },
+      "routing": {
+        "ICON_SNIPER": 6,
+        "TABLE_RESCUE": 4
+      }
+    },
+    {
+      "name": "Samsung AR9500T AC (42p)",
+      "pages": 42,
+      "time_s": 5.818,
+      "pages_per_s": 7.2,
+      "chars": 50652,
+      "sections": 54,
+      "figures": 25,
+      "categories": [
+        "INSTALLATION",
+        "MAINTENANCE",
+        "OPERATION",
+        "SAFETY",
+        "TECHNICAL_SPEC",
+        "TROUBLESHOOTING"
+      ],
+      "quality": 0.955,
+      "passed": true,
+      "dimensions": {
+        "format_compliance": 1.0,
+        "heading_hierarchy": 1.0,
+        "content_accuracy": 0.9,
+        "structural_consistency": 1.0,
+        "table_integrity": 0.9
+      },
+      "routing": {
+        "ICON_SNIPER": 34,
+        "NATIVE": 2,
+        "TABLE_RESCUE": 6
+      }
+    }
+  ]
+}
