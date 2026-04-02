@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "orangeD"
+version = "0.1.0"
+description = "Hybrid intelligent PDF-to-Markdown pipeline with strategy routing, multi-OCR adapters, and 5-dimensional quality judge"
+readme = "README.md"
+license = {text = "Apache-2.0"}
+requires-python = ">=3.9"
+authors = [
+    {name = "CognoLiving Team"}
+]
+keywords = ["pdf", "ocr", "markdown", "document-extraction", "vlm", "paddleocr"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Text Processing :: General",
+]
+
+dependencies = [
+    "pymupdf>=1.24.0",
+]
+
+[project.optional-dependencies]
+paddle = ["paddleocr>=2.7", "paddlepaddle-gpu>=2.6"]
+qwen = ["transformers>=4.40", "torch>=2.1", "qwen-vl-utils"]
+gemini = ["google-genai>=1.0"]
+glm = ["zhipuai>=2.0"]
+benchmark = ["psutil>=5.9", "tabulate>=0.9"]
+all = ["orangeD[paddle,qwen,gemini,glm,benchmark]"]
+
+[project.scripts]
+oranged = "oranged.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/cogno-living/orangeD"
+Repository = "https://github.com/cogno-living/orangeD"
+Issues = "https://github.com/cogno-living/orangeD/issues"
+
+[tool.setuptools.packages.find]
+include = ["oranged*"]
