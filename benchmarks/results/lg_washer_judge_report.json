@@ -1,0 +1,26 @@
+{
+  "overall_score": 0.985,
+  "dimensions": {
+    "format_compliance": 1.0,
+    "heading_hierarchy": 1.0,
+    "content_accuracy": 1.0,
+    "structural_consistency": 1.0,
+    "table_integrity": 0.9
+  },
+  "passed": true,
+  "dominant_category": "GENERAL",
+  "weights_used": {
+    "format": 0.2,
+    "heading": 0.15,
+    "content": 0.3,
+    "structure": 0.2,
+    "table": 0.15
+  },
+  "section_count": 177,
+  "figure_count": 76,
+  "crossref_count": 0,
+  "file": "3828ER3052K_en_split.pdf",
+  "pages": 24,
+  "extraction_time_s": 6.945,
+  "pages_per_second": 3.46
+}

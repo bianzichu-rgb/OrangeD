@@ -8,11 +8,11 @@ Native-first extraction with smart OCR/VLM fallback routing, 5-dimensional quali
 
 ---
 
-## Why orangeD?
+## Why OrangeD?
 
-Most PDF extraction tools take a one-size-fits-all approach: PaddleOCR runs full OCR on every page, GLM-4V sends everything through a heavy VLM, MinerU applies uniform rule+model pipelines. This wastes compute on pages that don't need it and misses quality on pages that do.
+Most PDF extraction tools take a one-size-fits-all approach: PaddleOCR runs full OCR on every page, GLM-4V sends everything through a heavy VLM, MinerU applies uniform rule+model pipelines.
 
-**orangeD routes intelligently at the block level:**
+OrangeD takes a different approach: **inspect each page first, then choose the cheapest strategy that works.**
 
 ```
 PDF Input → Strategy Sniffing (per-page)
@@ -24,26 +24,25 @@ PDF Input → Strategy Sniffing (per-page)
   └─ FULL_VLM         → Scanned/image-only → Full OCR/VLM pipeline
 ```
 
-For a typical 80-page appliance manual, **~70% of pages go through the native path** (zero GPU), and only the remaining complex pages trigger OCR/VLM — resulting in 10-50x speedup over full-OCR approaches.
+For digital-born PDFs, the majority of pages can be extracted natively without any GPU. Only pages that genuinely need vision-based processing are routed to OCR/VLM adapters.
 
 ---
 
-## Comparison
+## Design Comparison
 
-| Feature | **orangeD** | PaddleOCR | GLM-4V | MinerU |
+| Feature | **OrangeD** | PaddleOCR | GLM-4V | MinerU |
 |:---|:---|:---|:---|:---|
-| **Strategy** | Hybrid intelligent routing | Full OCR | Full VLM | Rule + model |
-| **Digital PDF** | Native extraction (zero GPU) | Full OCR (wasteful) | Full VLM (overkill) | Has native path |
+| **Strategy** | Hybrid per-page routing | Full OCR | Full VLM | Rule + model |
+| **Digital PDF** | Native extraction (zero GPU) | Full OCR | Full VLM | Has native path |
 | **Scanned PDF** | Pluggable OCR/VLM adapters | Native OCR | Native VLM | Native |
-| **GPU for digital PDFs** | **0%** | 100% | 100% | Partial |
-| **Speed (digital)** | **50-200 pages/s** | 2-5 pages/s | 0.5-2 pages/s | 5-15 pages/s |
 | **Heading recovery** | Font-size hierarchy + breadcrumb | None | Limited | Rule-based |
 | **Dual-column** | Auto-detect + reorder | No | VLM-dependent | Yes |
 | **Table reconstruction** | Zipper algorithm + VLM rescue | Table model | VLM direct | Rule + model |
-| **Quality judge** | **5-dimensional + partition-aware** | None | None | Limited |
-| **Section classification** | **9-category, CN/EN/JP** | None | None | None |
-| **Self-learning** | Brand heuristics + distillation | None | None | None |
+| **Quality judge** | 5-dimensional + partition-aware | None | None | Limited |
+| **Section classification** | 9-category, CN/EN/JP | None | None | None |
 | **Core dependency** | pymupdf (~30MB) | ~1.5GB | ~10GB+ | ~500MB |
+
+> **Note:** Speed comparisons are not included in this table because we have not yet run side-by-side benchmarks with PaddleOCR, GLM-4V, or MinerU under identical conditions. Cross-tool comparison is planned for v0.2.0.
 
 ---
 
@@ -140,7 +139,7 @@ oranged analyse output.md
 # 5D quality evaluation
 oranged judge output.md
 
-# Benchmark against PaddleOCR
+# Run benchmark
 oranged benchmark manual.pdf -o results.json
 ```
 
@@ -180,21 +179,22 @@ Every extraction is scored across 5 dimensions with **partition-aware weights** 
 | `structural_consistency` | Cross-refs valid, section coverage, reading order |
 | `table_integrity` | Column counts match, separator rows present |
 
+The judge evaluates **structural and syntactic quality**, not semantic accuracy against a ground truth. A high score means the output Markdown is well-formed and internally consistent. See [benchmarks/METHODOLOGY.md](benchmarks/METHODOLOGY.md) for full scoring details.
+
 ```python
 from oranged.judge import Judge5D
 
 report = Judge5D().evaluate(markdown_text, page_count=80)
 # report.overall_score = 0.892
-# report.dimensions = {"format_compliance": 0.95, "heading_hierarchy": 0.90, ...}
+# report.dimensions = {"format_compliance": 0.95, ...}
 # report.passed = True
-# report.dominant_category = "OPERATION"
 ```
 
 ---
 
 ## OCR Adapter System
 
-orangeD's adapter system lets you plug in any OCR/VLM backend:
+OrangeD's adapter system lets you plug in any OCR/VLM backend:
 
 | Adapter | Backend | GPU Required | Install |
 |:---|:---|:---|:---|
@@ -223,35 +223,54 @@ class MyOCRAdapter(BaseAdapter):
 
 ## Benchmark Results (v0.1.0)
 
-Tested on 5 real-world appliance manuals, **native extraction only (zero GPU)**:
+Tested on 5 real-world appliance manuals. **Native extraction only** — no OCR adapter active, zero GPU usage.
 
-| Document | Pages | Time | Pages/s | Output | Sections | Quality |
-|:---|:---|:---|:---|:---|:---|:---|
-| LG Washer | 24 | 7.15s | 3.4 | 45,543 chars | 177 | **0.985** |
-| Bambu Lab A1 3D Printer | 24 | 1.82s | 13.2 | 3,319 chars | 2 | **0.970** |
-| Bosch Climate 5000 AC | 24 | 0.76s | 31.6 | 74,346 chars | 12 | **0.895** |
-| Dyson TP07 Purifier | 10 | 2.23s | 4.5 | 75,386 chars | 19 | **0.990** |
-| Samsung AR9500T AC | 42 | 5.82s | 7.2 | 50,652 chars | 54 | **0.955** |
+| Document | Pages | Type | Time | Pages/s | Output | Sections | Quality |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| LG Washer | 24 | Digital-born | 7.15s | 3.4 | 45,543 chars | 177 | **0.985** |
+| Bambu Lab A1 (3D Printer) | 24 | Image-only | 1.82s | 13.2 | 3,319 chars | 2 | **0.970** |
+| Bosch Climate 5000 AC | 24 | Digital-born | 0.76s | 31.6 | 74,346 chars | 12 | **0.895** |
+| Dyson TP07 Purifier | 10 | Digital-born | 2.23s | 4.5 | 75,386 chars | 19 | **0.990** |
+| Samsung AR9500T AC | 42 | Digital-born | 5.82s | 7.2 | 50,652 chars | 54 | **0.955** |
 
-**Key takeaways:**
-- All 5 documents **PASS** quality gate (threshold: 0.70)
-- Average quality score: **0.959**
-- Average speed: **11.98 pages/s** (pure CPU, no GPU)
-- Automatic section classification recovered up to **7 distinct categories** per document (Safety, Installation, Operation, Maintenance, Troubleshooting, Technical Spec, Parts)
-- Routing correctly identified image-heavy pages for VLM fallback while keeping text-dense pages on the fast native path
+**Environment:** AMD Ryzen 7 3700X, 32GB RAM, Windows 11, Python 3.13, PyMuPDF 1.27.1. See [benchmarks/METHODOLOGY.md](benchmarks/METHODOLOGY.md) for full details.
 
-> With OCR adapters enabled (PaddleOCR/Qwen-VL), the pages routed as `ICON_SNIPER` / `FULL_VLM` would also produce text, further improving output completeness.
+**Reading the results:**
 
-Run your own benchmark:
-```bash
-oranged benchmark your_manual.pdf -o results.json
-```
+- All 5 documents pass the quality gate (threshold: 0.70). Quality scores measure structural correctness (Markdown validity, heading hierarchy, table integrity), not semantic completeness.
+- **Bambu Lab** scores high (0.970) despite only 3,319 chars because it's an image-only PDF — 21 of 24 pages have zero native text. The score reflects that the extracted content, though minimal, is well-formed. With an OCR adapter enabled, these pages would produce actual content.
+- Speed varies from 3.4 to 31.6 pages/s depending on document complexity. Bosch is fastest because its pages are dense, uniform text blocks. LG is slowest because it has many mixed text+image pages requiring more layout analysis.
+- Section classification recovered up to 7 distinct categories per document.
+
+**Full artifacts** (extracted Markdown, route logs, judge reports) for LG, Bosch, and Bambu Lab are available in [`benchmarks/results/`](benchmarks/results/).
+
+---
+
+## Known Limitations
+
+- **Native path only in v0.1.0.** Pages routed to `FULL_VLM` or `ICON_SNIPER` produce placeholder output unless an OCR adapter is configured. The benchmark results reflect native extraction floor, not full pipeline output.
+- **No ground truth comparison.** Quality scores are structural (syntax, hierarchy, table format), not semantic (was every sentence captured correctly). Human evaluation has not been conducted.
+- **No cross-tool benchmark yet.** We have not run side-by-side comparisons with PaddleOCR, MinerU, or GLM-OCR under identical conditions.
+- **Appliance manual focus.** The 9-category taxonomy and post-processing heuristics (parts tagging, spec table Zipper) are tuned for appliance manuals. Performance on other document types (academic papers, legal contracts, etc.) is untested.
+- **English/multilingual tested only.** The classifier supports Chinese, English, and Japanese keywords, but the benchmark set contains only English/multilingual documents.
+
+---
+
+## Roadmap
+
+| Version | Focus |
+|:---|:---|
+| **v0.1.1** | Benchmark reproducibility: add `oranged benchmark --compare` for cross-tool runs |
+| **v0.2.0** | End-to-end scanned PDF pipeline with PaddleOCR + Qwen-VL adapters benchmarked |
+| **v0.3.0** | Layout visualization / debug mode: visual diff between source PDF and extracted Markdown |
+| **v0.4.0** | Multilingual evaluation set (CN/JP/DE documents) |
+| **v0.5.0** | Self-learning: brand heuristic auto-generation from extraction failures |
 
 ---
 
 ## Origin
 
-OrangeD is extracted from [CognoLiving 2.0](https://github.com/cogno-living), a 5-layer self-learning document intelligence system built for appliance manual processing at scale (100K+ documents). The core extraction pipeline has been battle-tested across 68+ brands (Bosch, Miele, Dyson, Siemens, LG, Samsung, ...) and 8,114 taxonomy mappings.
+OrangeD's extraction engine is ported from CognoLiving 2.0, a document intelligence system designed for appliance manual processing. The parent system includes additional capabilities (self-learning heuristic engine, brand-specific correction scripts, neural routing, knowledge database) that are not part of this open-source release.
 
 ---
 

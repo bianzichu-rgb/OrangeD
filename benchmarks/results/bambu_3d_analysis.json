@@ -1,0 +1,679 @@
+{
+  "sections": [
+    {
+      "title": "3dprinter_bambu_a1_en",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 1,
+      "end_line": 197,
+      "content_preview": "## Table of Contents - Document (p.1)"
+    },
+    {
+      "title": "②",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 15,
+      "end_line": 197,
+      "content_preview": "--- [Image on page 6, position: middle]"
+    }
+  ],
+  "figures": [
+    {
+      "label": "Table o",
+      "page_hint": null,
+      "line_num": 3
+    },
+    {
+      "label": "[Image on page 4, position: middle]",
+      "page_hint": 4,
+      "line_num": 10
+    },
+    {
+      "label": "[Image on page 5, position: top]",
+      "page_hint": 5,
+      "line_num": 14
+    },
+    {
+      "label": "[Image on page 6, position: middle]",
+      "page_hint": 6,
+      "line_num": 19
+    },
+    {
+      "label": "[Image on page 8, position: middle]",
+      "page_hint": 8,
+      "line_num": 23
+    },
+    {
+      "label": "[Image on page 9, position: top]",
+      "page_hint": 9,
+      "line_num": 27
+    },
+    {
+      "label": "[Image on page 9, position: middle]",
+      "page_hint": 9,
+      "line_num": 28
+    },
+    {
+      "label": "[Image on page 10, position: middle]",
+      "page_hint": 10,
+      "line_num": 32
+    },
+    {
+      "label": "[Image on page 11, position: middle]",
+      "page_hint": 11,
+      "line_num": 36
+    },
+    {
+      "label": "[Image on page 13, position: middle]",
+      "page_hint": 13,
+      "line_num": 40
+    },
+    {
+      "label": "[Image on page 13, position: top]",
+      "page_hint": 13,
+      "line_num": 41
+    },
+    {
+      "label": "[Image on page 14, position: top]",
+      "page_hint": 14,
+      "line_num": 45
+    },
+    {
+      "label": "[Image on page 14, position: middle]",
+      "page_hint": 14,
+      "line_num": 46
+    },
+    {
+      "label": "[Image on page 15, position: middle]",
+      "page_hint": 15,
+      "line_num": 50
+    },
+    {
+      "label": "[Image on page 16, position: top]",
+      "page_hint": 16,
+      "line_num": 54
+    },
+    {
+      "label": "[Image on page 16, position: middle]",
+      "page_hint": 16,
+      "line_num": 55
+    },
+    {
+      "label": "[Image on page 17, position: top]",
+      "page_hint": 17,
+      "line_num": 59
+    },
+    {
+      "label": "[Image on page 17, position: middle]",
+      "page_hint": 17,
+      "line_num": 60
+    },
+    {
+      "label": "[Image on page 17, position: bottom]",
+      "page_hint": 17,
+      "line_num": 61
+    },
+    {
+      "label": "[Image on page 18, position: top]",
+      "page_hint": 18,
+      "line_num": 65
+    },
+    {
+      "label": "[Image on page 18, position: bottom]",
+      "page_hint": 18,
+      "line_num": 66
+    },
+    {
+      "label": "[Image on page 19, position: bottom]",
+      "page_hint": 19,
+      "line_num": 70
+    },
+    {
+      "label": "[Image on page 19, position: top]",
+      "page_hint": 19,
+      "line_num": 71
+    },
+    {
+      "label": "[Image on page 20, position: top]",
+      "page_hint": 20,
+      "line_num": 77
+    },
+    {
+      "label": "[Image on page 21, position: top]",
+      "page_hint": 21,
+      "line_num": 81
+    },
+    {
+      "label": "[Image on page 21, position: bottom]",
+      "page_hint": 21,
+      "line_num": 82
+    },
+    {
+      "label": "[Image on page 23, position: bottom]",
+      "page_hint": 23,
+      "line_num": 86
+    },
+    {
+      "label": "Figure 1",
+      "page_hint": null,
+      "line_num": 94
+    },
+    {
+      "label": "Figure 2",
+      "page_hint": null,
+      "line_num": 95
+    },
+    {
+      "label": "Figure 3",
+      "page_hint": null,
+      "line_num": 96
+    },
+    {
+      "label": "Figure 4",
+      "page_hint": null,
+      "line_num": 97
+    },
+    {
+      "label": "Figure 5",
+      "page_hint": null,
+      "line_num": 98
+    },
+    {
+      "label": "Figure 6",
+      "page_hint": null,
+      "line_num": 99
+    },
+    {
+      "label": "Figure 7",
+      "page_hint": null,
+      "line_num": 100
+    },
+    {
+      "label": "Figure 8",
+      "page_hint": null,
+      "line_num": 101
+    },
+    {
+      "label": "Figure 9",
+      "page_hint": null,
+      "line_num": 102
+    },
+    {
+      "label": "Figure 10",
+      "page_hint": null,
+      "line_num": 103
+    },
+    {
+      "label": "Figure 11",
+      "page_hint": null,
+      "line_num": 104
+    },
+    {
+      "label": "Figure 12",
+      "page_hint": null,
+      "line_num": 105
+    },
+    {
+      "label": "Figure 13",
+      "page_hint": null,
+      "line_num": 106
+    },
+    {
+      "label": "Figure 14",
+      "page_hint": null,
+      "line_num": 107
+    },
+    {
+      "label": "Figure 15",
+      "page_hint": null,
+      "line_num": 108
+    },
+    {
+      "label": "Figure 16",
+      "page_hint": null,
+      "line_num": 109
+    },
+    {
+      "label": "Figure 17",
+      "page_hint": null,
+      "line_num": 110
+    },
+    {
+      "label": "Figure 18",
+      "page_hint": null,
+      "line_num": 111
+    },
+    {
+      "label": "Figure 19",
+      "page_hint": null,
+      "line_num": 112
+    },
+    {
+      "label": "Figure 20",
+      "page_hint": null,
+      "line_num": 113
+    },
+    {
+      "label": "Figure 21",
+      "page_hint": null,
+      "line_num": 114
+    },
+    {
+      "label": "Figure 22",
+      "page_hint": null,
+      "line_num": 115
+    },
+    {
+      "label": "Figure 23",
+      "page_hint": null,
+      "line_num": 116
+    },
+    {
+      "label": "Figure 24",
+      "page_hint": null,
+      "line_num": 117
+    },
+    {
+      "label": "Figure 25",
+      "page_hint": null,
+      "line_num": 118
+    },
+    {
+      "label": "Figure 26",
+      "page_hint": null,
+      "line_num": 119
+    },
+    {
+      "label": "Figure 27",
+      "page_hint": null,
+      "line_num": 120
+    },
+    {
+      "label": "Figure 28",
+      "page_hint": null,
+      "line_num": 121
+    },
+    {
+      "label": "Figure 29",
+      "page_hint": null,
+      "line_num": 122
+    },
+    {
+      "label": "Figure 30",
+      "page_hint": null,
+      "line_num": 123
+    },
+    {
+      "label": "Figure 31",
+      "page_hint": null,
+      "line_num": 124
+    },
+    {
+      "label": "Figure 32",
+      "page_hint": null,
+      "line_num": 125
+    },
+    {
+      "label": "Figure 33",
+      "page_hint": null,
+      "line_num": 126
+    },
+    {
+      "label": "Figure 34",
+      "page_hint": null,
+      "line_num": 127
+    },
+    {
+      "label": "Figure 35",
+      "page_hint": null,
+      "line_num": 128
+    },
+    {
+      "label": "Figure 36",
+      "page_hint": null,
+      "line_num": 129
+    },
+    {
+      "label": "Figure 37",
+      "page_hint": null,
+      "line_num": 130
+    },
+    {
+      "label": "Figure 38",
+      "page_hint": null,
+      "line_num": 131
+    },
+    {
+      "label": "Figure 39",
+      "page_hint": null,
+      "line_num": 132
+    },
+    {
+      "label": "Figure 40",
+      "page_hint": null,
+      "line_num": 133
+    },
+    {
+      "label": "Figure 41",
+      "page_hint": null,
+      "line_num": 134
+    },
+    {
+      "label": "Figure 42",
+      "page_hint": null,
+      "line_num": 135
+    },
+    {
+      "label": "Figure 43",
+      "page_hint": null,
+      "line_num": 136
+    },
+    {
+      "label": "Figure 44",
+      "page_hint": null,
+      "line_num": 137
+    },
+    {
+      "label": "Figure 45",
+      "page_hint": null,
+      "line_num": 138
+    },
+    {
+      "label": "Figure 46",
+      "page_hint": null,
+      "line_num": 139
+    },
+    {
+      "label": "Figure 47",
+      "page_hint": null,
+      "line_num": 140
+    },
+    {
+      "label": "Figure 48",
+      "page_hint": null,
+      "line_num": 141
+    },
+    {
+      "label": "Figure 49",
+      "page_hint": null,
+      "line_num": 142
+    },
+    {
+      "label": "Figure 50",
+      "page_hint": null,
+      "line_num": 143
+    },
+    {
+      "label": "Figure 51",
+      "page_hint": null,
+      "line_num": 144
+    },
+    {
+      "label": "Figure 52",
+      "page_hint": null,
+      "line_num": 145
+    },
+    {
+      "label": "Figure 53",
+      "page_hint": null,
+      "line_num": 146
+    },
+    {
+      "label": "Figure 54",
+      "page_hint": null,
+      "line_num": 147
+    },
+    {
+      "label": "Figure 55",
+      "page_hint": null,
+      "line_num": 148
+    },
+    {
+      "label": "Figure 56",
+      "page_hint": null,
+      "line_num": 149
+    },
+    {
+      "label": "Figure 57",
+      "page_hint": null,
+      "line_num": 150
+    },
+    {
+      "label": "Figure 58",
+      "page_hint": null,
+      "line_num": 151
+    },
+    {
+      "label": "Figure 59",
+      "page_hint": null,
+      "line_num": 152
+    },
+    {
+      "label": "Figure 60",
+      "page_hint": null,
+      "line_num": 153
+    },
+    {
+      "label": "Figure 61",
+      "page_hint": null,
+      "line_num": 154
+    },
+    {
+      "label": "Figure 62",
+      "page_hint": null,
+      "line_num": 155
+    },
+    {
+      "label": "Figure 63",
+      "page_hint": null,
+      "line_num": 156
+    },
+    {
+      "label": "Figure 64",
+      "page_hint": null,
+      "line_num": 157
+    },
+    {
+      "label": "Figure 65",
+      "page_hint": null,
+      "line_num": 158
+    },
+    {
+      "label": "Figure 66",
+      "page_hint": null,
+      "line_num": 159
+    },
+    {
+      "label": "Figure 67",
+      "page_hint": null,
+      "line_num": 160
+    },
+    {
+      "label": "Figure 68",
+      "page_hint": null,
+      "line_num": 161
+    },
+    {
+      "label": "Figure 69",
+      "page_hint": null,
+      "line_num": 162
+    },
+    {
+      "label": "Figure 70",
+      "page_hint": null,
+      "line_num": 163
+    },
+    {
+      "label": "Figure 71",
+      "page_hint": null,
+      "line_num": 164
+    },
+    {
+      "label": "Figure 72",
+      "page_hint": null,
+      "line_num": 165
+    },
+    {
+      "label": "Figure 73",
+      "page_hint": null,
+      "line_num": 166
+    },
+    {
+      "label": "Figure 74",
+      "page_hint": null,
+      "line_num": 167
+    },
+    {
+      "label": "Figure 75",
+      "page_hint": null,
+      "line_num": 168
+    },
+    {
+      "label": "Figure 76",
+      "page_hint": null,
+      "line_num": 169
+    },
+    {
+      "label": "Figure 77",
+      "page_hint": null,
+      "line_num": 170
+    },
+    {
+      "label": "Figure 78",
+      "page_hint": null,
+      "line_num": 171
+    },
+    {
+      "label": "Figure 79",
+      "page_hint": null,
+      "line_num": 172
+    },
+    {
+      "label": "Figure 80",
+      "page_hint": null,
+      "line_num": 173
+    },
+    {
+      "label": "Figure 81",
+      "page_hint": null,
+      "line_num": 174
+    },
+    {
+      "label": "Figure 82",
+      "page_hint": null,
+      "line_num": 175
+    },
+    {
+      "label": "Figure 83",
+      "page_hint": null,
+      "line_num": 176
+    },
+    {
+      "label": "Figure 84",
+      "page_hint": null,
+      "line_num": 177
+    },
+    {
+      "label": "Figure 85",
+      "page_hint": null,
+      "line_num": 178
+    },
+    {
+      "label": "Figure 86",
+      "page_hint": null,
+      "line_num": 179
+    },
+    {
+      "label": "Figure 87",
+      "page_hint": null,
+      "line_num": 180
+    },
+    {
+      "label": "Figure 88",
+      "page_hint": null,
+      "line_num": 181
+    },
+    {
+      "label": "Figure 89",
+      "page_hint": null,
+      "line_num": 182
+    },
+    {
+      "label": "Figure 90",
+      "page_hint": null,
+      "line_num": 183
+    },
+    {
+      "label": "Figure 91",
+      "page_hint": null,
+      "line_num": 184
+    },
+    {
+      "label": "Figure 92",
+      "page_hint": null,
+      "line_num": 185
+    },
+    {
+      "label": "Figure 93",
+      "page_hint": null,
+      "line_num": 186
+    },
+    {
+      "label": "Figure 94",
+      "page_hint": null,
+      "line_num": 187
+    },
+    {
+      "label": "Figure 95",
+      "page_hint": null,
+      "line_num": 188
+    },
+    {
+      "label": "Figure 96",
+      "page_hint": null,
+      "line_num": 189
+    },
+    {
+      "label": "Figure 97",
+      "page_hint": null,
+      "line_num": 190
+    },
+    {
+      "label": "Figure 98",
+      "page_hint": null,
+      "line_num": 191
+    },
+    {
+      "label": "Figure 99",
+      "page_hint": null,
+      "line_num": 192
+    },
+    {
+      "label": "Figure 100",
+      "page_hint": null,
+      "line_num": 193
+    },
+    {
+      "label": "Figure 101",
+      "page_hint": null,
+      "line_num": 194
+    },
+    {
+      "label": "Figure 102",
+      "page_hint": null,
+      "line_num": 195
+    },
+    {
+      "label": "Figure 103",
+      "page_hint": null,
+      "line_num": 196
+    },
+    {
+      "label": "Figure 104",
+      "page_hint": null,
+      "line_num": 197
+    }
+  ],
+  "cross_refs": [],
+  "total_lines": 197
+}

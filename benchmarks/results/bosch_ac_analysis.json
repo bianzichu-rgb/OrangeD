@@ -1,0 +1,224 @@
+{
+  "sections": [
+    {
+      "title": "Air Conditioner Bosch Climate 5000 MS 12 user manual filetypepdf",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 1,
+      "end_line": 9,
+      "content_preview": "## Table of Contents - Climate Line 5000 (p.1)"
+    },
+    {
+      "title": "Climate Line 5000",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 10,
+      "end_line": 202,
+      "content_preview": "<!-- Climate Line 5000 --> CLL5000 W 22 E I CLL5000 22 ECLL5000 W 28 E I CLL5000 28 ECLL5000 W 34 E I CLL5000 34 E enSpl"
+    },
+    {
+      "title": "Product Information",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 75,
+      "end_line": 202,
+      "content_preview": "H Safety of electrical devices for domestic use and similar purposesThe following requirements apply in accordance with "
+    },
+    {
+      "title": "Troubleshooting",
+      "category": "TROUBLESHOOTING",
+      "confidence": 1.0,
+      "start_line": 203,
+      "end_line": 239,
+      "content_preview": "4.1Faults with indication (Self diagnosis function)If a fault occurs during operation, the LEDs flash for an extended pe"
+    },
+    {
+      "title": "Environmental protection and disposal",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 240,
+      "end_line": 256,
+      "content_preview": "6Environmental protection and disposalEnvironmental protection is a fundamental corporate strategy of the Bosch Group. T"
+    },
+    {
+      "title": "Содержание",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 257,
+      "end_line": 332,
+      "content_preview": "Содержание1Пояснения условных обозначений и указания по безопасности 1 Пояснения условных обозначений и указания по безо"
+    },
+    {
+      "title": "Информация об изделии",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 333,
+      "end_line": 441,
+      "content_preview": "В рассматриваемом примере получается следующая дата изготовления: январь 2021 г. Таб. 4Конвертирование 3-значного кода в"
+    },
+    {
+      "title": "Управление",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 345,
+      "end_line": 441,
+      "content_preview": "3Управление 3.1Обзор внутреннего блокаПояснения к рис. 1:[1]Верхняя пластиковая крышка[2]Место для малого фильтра[3]Возд"
+    },
+    {
+      "title": "Устранение неисправностей",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 442,
+      "end_line": 454,
+      "content_preview": "Функция подачи свежего воздуха (Ionizer) В помещение подаются ионы для борьбы с содержащимися в воздухе вредными веществ"
+    },
+    {
+      "title": "Техническое обслуживание",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 455,
+      "end_line": 489,
+      "content_preview": "НеисправностьВозможная причинаСлишком низкая мощность внутреннего блока.Установлена слишком высокая или слишком низкая т"
+    },
+    {
+      "title": "Охрана окружающей среды и утилизация",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 490,
+      "end_line": 569,
+      "content_preview": "6Охрана окружающей среды и утилизацияЗащита окружающей среды — это основной принцип деятельности предприятий группы Bosc"
+    },
+    {
+      "title": "1.",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 550,
+      "end_line": 569,
+      "content_preview": "<!-- Climate Line 5000 > 1. --> 2.2.2.2.2.2.3.3.3.3.3.3. 0010034213-001 Climate Line 5000 – 6721831691 (2021/02)22"
+    }
+  ],
+  "figures": [
+    {
+      "label": "Table o",
+      "page_hint": null,
+      "line_num": 3
+    },
+    {
+      "label": "[Image on page 1, position: bottom]",
+      "page_hint": 1,
+      "line_num": 15
+    },
+    {
+      "label": "[Image on page 1, position: middle]",
+      "page_hint": 1,
+      "line_num": 16
+    },
+    {
+      "label": "Table o",
+      "page_hint": null,
+      "line_num": 21
+    },
+    {
+      "label": "Table o",
+      "page_hint": null,
+      "line_num": 22
+    },
+    {
+      "label": "Table 1",
+      "page_hint": null,
+      "line_num": 61
+    },
+    {
+      "label": "table f",
+      "page_hint": null,
+      "line_num": 70
+    },
+    {
+      "label": "Fig. 1",
+      "page_hint": null,
+      "line_num": 84
+    },
+    {
+      "label": "Table 2",
+      "page_hint": null,
+      "line_num": 85
+    },
+    {
+      "label": "Table 3",
+      "page_hint": null,
+      "line_num": 92
+    },
+    {
+      "label": "table o",
+      "page_hint": null,
+      "line_num": 93
+    },
+    {
+      "label": "Table 4",
+      "page_hint": null,
+      "line_num": 96
+    },
+    {
+      "label": "Table 5",
+      "page_hint": null,
+      "line_num": 99
+    },
+    {
+      "label": "Table 6",
+      "page_hint": null,
+      "line_num": 107
+    },
+    {
+      "label": "Table 7",
+      "page_hint": null,
+      "line_num": 112
+    },
+    {
+      "label": "Table 8",
+      "page_hint": null,
+      "line_num": 127
+    },
+    {
+      "label": "Table 9",
+      "page_hint": null,
+      "line_num": 156
+    },
+    {
+      "label": "table o",
+      "page_hint": null,
+      "line_num": 208
+    },
+    {
+      "label": "Table 10",
+      "page_hint": null,
+      "line_num": 211
+    },
+    {
+      "label": "Fig. 2",
+      "page_hint": null,
+      "line_num": 220
+    },
+    {
+      "label": "Fig. 3",
+      "page_hint": null,
+      "line_num": 232
+    },
+    {
+      "label": "Figure 1",
+      "page_hint": null,
+      "line_num": 567
+    },
+    {
+      "label": "Figure 2",
+      "page_hint": null,
+      "line_num": 568
+    },
+    {
+      "label": "Figure 3",
+      "page_hint": null,
+      "line_num": 569
+    }
+  ],
+  "cross_refs": [],
+  "total_lines": 569
+}

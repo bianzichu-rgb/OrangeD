@@ -1,0 +1,26 @@
+{
+  "overall_score": 0.97,
+  "dimensions": {
+    "format_compliance": 1.0,
+    "heading_hierarchy": 1.0,
+    "content_accuracy": 1.0,
+    "structural_consistency": 0.85,
+    "table_integrity": 1.0
+  },
+  "passed": true,
+  "dominant_category": "GENERAL",
+  "weights_used": {
+    "format": 0.2,
+    "heading": 0.15,
+    "content": 0.3,
+    "structure": 0.2,
+    "table": 0.15
+  },
+  "section_count": 2,
+  "figure_count": 131,
+  "crossref_count": 0,
+  "file": "3dprinter_bambu_a1_en.pdf",
+  "pages": 24,
+  "extraction_time_s": 1.788,
+  "pages_per_second": 13.43
+}

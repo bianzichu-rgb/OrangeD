@@ -1,0 +1,1804 @@
+{
+  "sections": [
+    {
+      "title": "3828ER3052K_en_split",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 1,
+      "end_line": 33,
+      "content_preview": "## Table of Contents - Owner's (p.1) - PRODUCT (p.2)"
+    },
+    {
+      "title": "1-800-243-0000",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 34,
+      "end_line": 34,
+      "content_preview": ""
+    },
+    {
+      "title": "24 HOURS A DAY, 7 DAYS A WEEK FOR LG CUSTOMER SERVICE",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 35,
+      "end_line": 35,
+      "content_preview": ""
+    },
+    {
+      "title": "Owner's Manual",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 36,
+      "end_line": 36,
+      "content_preview": ""
+    },
+    {
+      "title": "Washing Machine",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 37,
+      "end_line": 37,
+      "content_preview": ""
+    },
+    {
+      "title": "WM2688H*M",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 38,
+      "end_line": 50,
+      "content_preview": "<!-- WM2688H*M --> Please read this manual carefully.It provides instructions on safe installation, use, and maintenance"
+    },
+    {
+      "title": "PRODUCT FEATURES",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 51,
+      "end_line": 65,
+      "content_preview": "<!-- PRODUCT FEATURES --> ■Ultra CapacityThe Larger drum enables not just higher head drop and stronger centrifugal forc"
+    },
+    {
+      "title": "CONTENTS",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 66,
+      "end_line": 79,
+      "content_preview": "<!-- CONTENTS --> Important Safety Information ........................................................................."
+    },
+    {
+      "title": "IMPORTANT SAFETY INFORMATION",
+      "category": "SAFETY",
+      "confidence": 0.9,
+      "start_line": 80,
+      "end_line": 80,
+      "content_preview": ""
+    },
+    {
+      "title": "READ ALL INSTRUCTIONS BEFORE USE",
+      "category": "OPERATION",
+      "confidence": 0.9,
+      "start_line": 81,
+      "end_line": 81,
+      "content_preview": ""
+    },
+    {
+      "title": "WARNING!",
+      "category": "SAFETY",
+      "confidence": 0.9,
+      "start_line": 82,
+      "end_line": 85,
+      "content_preview": "<!-- WARNING! --> For your safety, the information in this manual must be followed to minimize the risk of fire or explo"
+    },
+    {
+      "title": "IMPORTANT SAFETY INSTRUCTIONS",
+      "category": "SAFETY",
+      "confidence": 0.9,
+      "start_line": 86,
+      "end_line": 94,
+      "content_preview": "<!-- IMPORTANT SAFETY INSTRUCTIONS --> WARNING: To reduce the risk of fire, electric shock, or injury to persons when us"
+    },
+    {
+      "title": "SAVE THESE INSTRUCTIONS",
+      "category": "OPERATION",
+      "confidence": 0.9,
+      "start_line": 95,
+      "end_line": 95,
+      "content_preview": ""
+    },
+    {
+      "title": "GROUNDING INSTRUCTIONS",
+      "category": "OPERATION",
+      "confidence": 0.9,
+      "start_line": 96,
+      "end_line": 119,
+      "content_preview": "<!-- GROUNDING INSTRUCTIONS --> This appliance must be grounded. In the event of malfunction or breakdown, grounding wil"
+    },
+    {
+      "title": "SPECIFICATIONS",
+      "category": "TECHNICAL_SPEC",
+      "confidence": 1.0,
+      "start_line": 120,
+      "end_line": 139,
+      "content_preview": "<!-- SPECIFICATIONS --> CHILD LOCK DELAYWASH STEAMDOOR LOCKEST. TME:REMANING5% HIGHWASHINGHIGH NORMAL"
+    },
+    {
+      "title": "■Accessories",
+      "category": "PARTS",
+      "confidence": 0.9,
+      "start_line": 137,
+      "end_line": 139,
+      "content_preview": "1) Per IEC 60456, washes the equivalent of a 4.0 cu. ft. agitator washer. 1:21"
+    },
+    {
+      "title": "& Steam NozzleDrum Light",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 140,
+      "end_line": 140,
+      "content_preview": ""
+    },
+    {
+      "title": "Door Seal",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 141,
+      "end_line": 141,
+      "content_preview": ""
+    },
+    {
+      "title": "Safety Cover (PLC Modem)",
+      "category": "SAFETY",
+      "confidence": 0.9,
+      "start_line": 142,
+      "end_line": 146,
+      "content_preview": "--- [Image on page 5, position: middle]"
+    },
+    {
+      "title": "INSTALLATION INSTRUCTIONS",
+      "category": "INSTALLATION",
+      "confidence": 0.9,
+      "start_line": 147,
+      "end_line": 164,
+      "content_preview": "<!-- INSTALLATION INSTRUCTIONS --> ! WARNING : Two or more people may be need to install and move the appliance. Install"
+    },
+    {
+      "title": "■Shipping bolts",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 155,
+      "end_line": 157,
+      "content_preview": "The appliance is fitted with shipping bolts to preventinternal damage during transportation.Packing and all shipping bol"
+    },
+    {
+      "title": "■Removing shipping bolts",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 158,
+      "end_line": 164,
+      "content_preview": "1. To prevent internal damage during transport,4 locking bolts are installed. Before operatingthe washer, remove the bol"
+    },
+    {
+      "title": "ENGLISH",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 165,
+      "end_line": 193,
+      "content_preview": "<!-- ENGLISH --> cap 3. Take out the 4 bolts and braces by twistingthe braces slightly. Keep the 4 bolts, bracesand the "
+    },
+    {
+      "title": "■Washer dimensions",
+      "category": "TECHNICAL_SPEC",
+      "confidence": 0.9,
+      "start_line": 177,
+      "end_line": 193,
+      "content_preview": "STEAMOORLOCK HLDL CKD LAYWASH1:21 EST.TME:REMANNG HGHWASHING HIGH"
+    },
+    {
+      "title": "[Side view]",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 194,
+      "end_line": 202,
+      "content_preview": "<!-- [Side view] --> STEMOOROCK CLDOCKELYWASH STTM:REMAIG5% 121"
+    },
+    {
+      "title": "[Front view]",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 203,
+      "end_line": 298,
+      "content_preview": "<!-- [Front view] --> ■Level floor ? Allowable slope under entire washer is 1 . ? To minimize noise and vibration, the w"
+    },
+    {
+      "title": "■Power outlet",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 217,
+      "end_line": 239,
+      "content_preview": "? Must be within 60 in. (1.5 m) of either side of the washer. Do not overload the outlet with morethan one appliance. ? "
+    },
+    {
+      "title": "■Connecting water supply hose",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 240,
+      "end_line": 287,
+      "content_preview": "NOTE: Washing Machine is to be connected to the water mains using new hoses.Old hoses should not be used. Repairs to the"
+    },
+    {
+      "title": "■Level adjustment",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 288,
+      "end_line": 298,
+      "content_preview": "SEAMDOOR OCK CHLDL CK DLAYWAH1:21 ES.IME:REMNING HGH TEMDOROC"
+    },
+    {
+      "title": "TightenTighten",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 299,
+      "end_line": 332,
+      "content_preview": "<!-- TightenTighten --> STAMD RLOK 5% HLDL K DELYWAH ES.ME:EMNNG"
+    },
+    {
+      "title": "PREPARATION BEFORE WASHING",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 333,
+      "end_line": 333,
+      "content_preview": ""
+    },
+    {
+      "title": "WARNING",
+      "category": "SAFETY",
+      "confidence": 1.0,
+      "start_line": 334,
+      "end_line": 353,
+      "content_preview": "<!-- WARNING --> To reduce the risk of fire, electric shock, or injury to persons, read the IMPORTANT SAFETYINSTRUCTIONS"
+    },
+    {
+      "title": "USING THE DISPENSER",
+      "category": "OPERATION",
+      "confidence": 0.9,
+      "start_line": 354,
+      "end_line": 366,
+      "content_preview": "<!-- USING THE DISPENSER --> The automatic dispenser consists of four compartments which hold 1) liquid chlorine bleach,"
+    },
+    {
+      "title": "■About detergent",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 363,
+      "end_line": 366,
+      "content_preview": "Your LG TROMM washer is designed to use only High Efficiency (HE) detergents.HE detergents are formulated specifically f"
+    },
+    {
+      "title": "Liquid ChlorineBleachCompartment",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 367,
+      "end_line": 367,
+      "content_preview": ""
+    },
+    {
+      "title": "Liquid FabricSoftenerCompartment",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 368,
+      "end_line": 368,
+      "content_preview": ""
+    },
+    {
+      "title": "PrewashCompartment",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 369,
+      "end_line": 369,
+      "content_preview": ""
+    },
+    {
+      "title": "Main WashCompartment",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 370,
+      "end_line": 386,
+      "content_preview": "<!-- Main WashCompartment --> 1. Prewash Detergent Compartment ? Add detergent to this compartment when usingthe Prewash"
+    },
+    {
+      "title": "Insert",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 387,
+      "end_line": 387,
+      "content_preview": ""
+    },
+    {
+      "title": "Liquid DetergentBox",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 388,
+      "end_line": 413,
+      "content_preview": "<!-- Liquid DetergentBox --> 3. Liquid Bleach Compartment ? Add measured liquid chlorine bleach to thiscompartment. The "
+    },
+    {
+      "title": "CYCLES",
+      "category": "OPERATION",
+      "confidence": 1.0,
+      "start_line": 414,
+      "end_line": 417,
+      "content_preview": "<!-- CYCLES --> ■Select cycles designed for different types of fabric and soil levels. Fabric typeWash/RinseTemp.Spin Sp"
+    },
+    {
+      "title": "Cycle",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 418,
+      "end_line": 418,
+      "content_preview": ""
+    },
+    {
+      "title": "Dress shirts, blouses",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 419,
+      "end_line": 419,
+      "content_preview": ""
+    },
+    {
+      "title": "Steam",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 420,
+      "end_line": 420,
+      "content_preview": ""
+    },
+    {
+      "title": "FreshTM",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 421,
+      "end_line": 421,
+      "content_preview": ""
+    },
+    {
+      "title": "Heavily soiled",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 422,
+      "end_line": 422,
+      "content_preview": ""
+    },
+    {
+      "title": "Extra Hot/ColdHigh",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 423,
+      "end_line": 425,
+      "content_preview": "<!-- Extra Hot/ColdHigh --> underwear, work"
+    },
+    {
+      "title": "Extra HighNo SpinLowMedium",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 426,
+      "end_line": 426,
+      "content_preview": ""
+    },
+    {
+      "title": "Sanitary",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 427,
+      "end_line": 430,
+      "content_preview": "<!-- Sanitary --> clothes, diapers, etc Large items such as"
+    },
+    {
+      "title": "Low",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 431,
+      "end_line": 431,
+      "content_preview": ""
+    },
+    {
+      "title": "Warm/Cold",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 432,
+      "end_line": 434,
+      "content_preview": "<!-- Warm/Cold --> blankets and comforters"
+    },
+    {
+      "title": "MediumNo Spin",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 435,
+      "end_line": 435,
+      "content_preview": ""
+    },
+    {
+      "title": "Warm/Warm",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 436,
+      "end_line": 436,
+      "content_preview": ""
+    },
+    {
+      "title": "Bulky/Large",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 437,
+      "end_line": 437,
+      "content_preview": ""
+    },
+    {
+      "title": "Hot/Cold",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 438,
+      "end_line": 438,
+      "content_preview": ""
+    },
+    {
+      "title": "Cold/Cold",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 439,
+      "end_line": 439,
+      "content_preview": ""
+    },
+    {
+      "title": "Dress shirts/pantswrinkle free clothing,poly/cotton blend",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 440,
+      "end_line": 440,
+      "content_preview": ""
+    },
+    {
+      "title": "Medium",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 441,
+      "end_line": 441,
+      "content_preview": ""
+    },
+    {
+      "title": "HighNo SpinLow",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 442,
+      "end_line": 442,
+      "content_preview": ""
+    },
+    {
+      "title": "Perm Press",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 443,
+      "end_line": 445,
+      "content_preview": "<!-- Perm Press --> clothing, table cloths"
+    },
+    {
+      "title": "Cotton, linen, towels,",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 446,
+      "end_line": 446,
+      "content_preview": ""
+    },
+    {
+      "title": "High",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 447,
+      "end_line": 448,
+      "content_preview": "shirts, sheets, jeans,mixed loads"
+    },
+    {
+      "title": "Cotton/",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 449,
+      "end_line": 449,
+      "content_preview": ""
+    },
+    {
+      "title": "Normal",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 450,
+      "end_line": 450,
+      "content_preview": ""
+    },
+    {
+      "title": "Lightly soiled",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 451,
+      "end_line": 451,
+      "content_preview": ""
+    },
+    {
+      "title": "Extra Hot/Cold",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 452,
+      "end_line": 454,
+      "content_preview": "<!-- High --> baby wear"
+    },
+    {
+      "title": "Baby Wear",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 455,
+      "end_line": 455,
+      "content_preview": ""
+    },
+    {
+      "title": "Dress shirts/blouses",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 456,
+      "end_line": 458,
+      "content_preview": "<!-- Cold/Cold --> nylons, sheer or lacygarment"
+    },
+    {
+      "title": "Delicates",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 459,
+      "end_line": 459,
+      "content_preview": ""
+    },
+    {
+      "title": "No SpinLow",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 460,
+      "end_line": 460,
+      "content_preview": ""
+    },
+    {
+      "title": "Warm/ColdWarm/Warm",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 461,
+      "end_line": 461,
+      "content_preview": ""
+    },
+    {
+      "title": "Items labeled \"handwashable\"",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 462,
+      "end_line": 462,
+      "content_preview": ""
+    },
+    {
+      "title": "Low",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 463,
+      "end_line": 463,
+      "content_preview": ""
+    },
+    {
+      "title": "Hand Wash/Wool",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 464,
+      "end_line": 464,
+      "content_preview": ""
+    },
+    {
+      "title": "Lightly soiled clothingand small loads",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 465,
+      "end_line": 465,
+      "content_preview": ""
+    },
+    {
+      "title": "Extra High",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 466,
+      "end_line": 466,
+      "content_preview": ""
+    },
+    {
+      "title": "No SpinLowMedium",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 467,
+      "end_line": 467,
+      "content_preview": ""
+    },
+    {
+      "title": "Cold/ColdWarm/ColdWarm/Warm",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 468,
+      "end_line": 468,
+      "content_preview": ""
+    },
+    {
+      "title": "Speed Wash",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 469,
+      "end_line": 471,
+      "content_preview": "NOTE: To protect your garments, not every Wash/Rinse temperature, spin speed, soil level or option is available with eve"
+    },
+    {
+      "title": "Stain",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 472,
+      "end_line": 472,
+      "content_preview": ""
+    },
+    {
+      "title": "Water",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 473,
+      "end_line": 473,
+      "content_preview": ""
+    },
+    {
+      "title": "CycleSteamExtra",
+      "category": "OPERATION",
+      "confidence": 0.9,
+      "start_line": 474,
+      "end_line": 474,
+      "content_preview": ""
+    },
+    {
+      "title": "Plus",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 475,
+      "end_line": 475,
+      "content_preview": ""
+    },
+    {
+      "title": "Rinse",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 476,
+      "end_line": 476,
+      "content_preview": ""
+    },
+    {
+      "title": "Spin",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 477,
+      "end_line": 477,
+      "content_preview": ""
+    },
+    {
+      "title": "O",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 478,
+      "end_line": 478,
+      "content_preview": ""
+    },
+    {
+      "title": "OO",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 479,
+      "end_line": 479,
+      "content_preview": ""
+    },
+    {
+      "title": "O",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 480,
+      "end_line": 480,
+      "content_preview": ""
+    },
+    {
+      "title": "OOO",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 481,
+      "end_line": 481,
+      "content_preview": ""
+    },
+    {
+      "title": "HeavyLight",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 482,
+      "end_line": 482,
+      "content_preview": ""
+    },
+    {
+      "title": "OOOOO",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 483,
+      "end_line": 483,
+      "content_preview": ""
+    },
+    {
+      "title": "O",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 484,
+      "end_line": 484,
+      "content_preview": ""
+    },
+    {
+      "title": "O",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 485,
+      "end_line": 485,
+      "content_preview": ""
+    },
+    {
+      "title": "O",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 486,
+      "end_line": 486,
+      "content_preview": ""
+    },
+    {
+      "title": "O",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 487,
+      "end_line": 487,
+      "content_preview": ""
+    },
+    {
+      "title": "O",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 488,
+      "end_line": 488,
+      "content_preview": ""
+    },
+    {
+      "title": "O",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 489,
+      "end_line": 489,
+      "content_preview": ""
+    },
+    {
+      "title": "O",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 490,
+      "end_line": 490,
+      "content_preview": ""
+    },
+    {
+      "title": "O",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 491,
+      "end_line": 491,
+      "content_preview": ""
+    },
+    {
+      "title": "O",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 492,
+      "end_line": 492,
+      "content_preview": ""
+    },
+    {
+      "title": "O",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 493,
+      "end_line": 493,
+      "content_preview": ""
+    },
+    {
+      "title": "O",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 494,
+      "end_line": 494,
+      "content_preview": ""
+    },
+    {
+      "title": "O",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 495,
+      "end_line": 495,
+      "content_preview": ""
+    },
+    {
+      "title": "O",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 496,
+      "end_line": 496,
+      "content_preview": ""
+    },
+    {
+      "title": "O",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 497,
+      "end_line": 497,
+      "content_preview": ""
+    },
+    {
+      "title": "O",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 498,
+      "end_line": 498,
+      "content_preview": ""
+    },
+    {
+      "title": "OOOO",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 499,
+      "end_line": 499,
+      "content_preview": ""
+    },
+    {
+      "title": "OO",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 500,
+      "end_line": 500,
+      "content_preview": ""
+    },
+    {
+      "title": "O",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 501,
+      "end_line": 501,
+      "content_preview": ""
+    },
+    {
+      "title": "Light",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 502,
+      "end_line": 502,
+      "content_preview": ""
+    },
+    {
+      "title": "OOO",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 503,
+      "end_line": 503,
+      "content_preview": ""
+    },
+    {
+      "title": "Heavy",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 504,
+      "end_line": 508,
+      "content_preview": "--- [Image on page 14, position: middle]"
+    },
+    {
+      "title": "HOW TO USE THE WASHER",
+      "category": "OPERATION",
+      "confidence": 0.9,
+      "start_line": 509,
+      "end_line": 509,
+      "content_preview": ""
+    },
+    {
+      "title": "Cycle Selector KnobWash/Rinse",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 510,
+      "end_line": 510,
+      "content_preview": ""
+    },
+    {
+      "title": "TemperatureSpin SpeedSoil LevelBeeper",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 511,
+      "end_line": 524,
+      "content_preview": "<!-- TemperatureSpin SpeedSoil LevelBeeper --> 1. Power ? Use this button to turn the Power On/Off. 2. Cycles ? Rotate t"
+    },
+    {
+      "title": "NOTE:",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 525,
+      "end_line": 530,
+      "content_preview": "<!-- NOTE: --> - If you do not press the Start/Pause button within 4 minutes of selecting a cycle, the washer automatica"
+    },
+    {
+      "title": "- The LCD will darken after 4 minutes and will be",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 529,
+      "end_line": 530,
+      "content_preview": "restored when any button is pressed."
+    },
+    {
+      "title": "Status Indicator",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 531,
+      "end_line": 531,
+      "content_preview": ""
+    },
+    {
+      "title": "STEAM DOOR LOCK",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 532,
+      "end_line": 532,
+      "content_preview": ""
+    },
+    {
+      "title": "CHILD LOCK DELAY WASH",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 533,
+      "end_line": 535,
+      "content_preview": "<!-- CHILD LOCK DELAY WASH --> EST. TIMEREMANING"
+    },
+    {
+      "title": "5%01:21",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 536,
+      "end_line": 536,
+      "content_preview": ""
+    },
+    {
+      "title": "STEAMDELAYWASHING",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 537,
+      "end_line": 537,
+      "content_preview": ""
+    },
+    {
+      "title": "EXTRAHOT/COLDEXTRAHIGHHEAVYHIGH",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 538,
+      "end_line": 540,
+      "content_preview": "<!-- EXTRAHOT/COLDEXTRAHIGHHEAVYHIGH --> 4. Delay"
+    },
+    {
+      "title": "DELAY WASH",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 541,
+      "end_line": 547,
+      "content_preview": "<!-- DELAY WASH --> ? Allows the start of any cycle to be delayed for1~19hours. ? Choose the wash cycle for your load, a"
+    },
+    {
+      "title": "Steam Wash",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 548,
+      "end_line": 561,
+      "content_preview": "<!-- Steam Wash --> ?For tough stained clothes, underwear, or baby clothes. ? Steam Wash is available with Sanitary,Bulk"
+    },
+    {
+      "title": "It may seem there is no water inside the drum, but this",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 556,
+      "end_line": 558,
+      "content_preview": "is normal. - Steam spray may not be seen clearly through the door;however, the washer is spraying steam strongly inside."
+    },
+    {
+      "title": "- During the steam operation, a spraying sound will be",
+      "category": "OPERATION",
+      "confidence": 0.9,
+      "start_line": 559,
+      "end_line": 561,
+      "content_preview": "heard. This is not a malfunction. CAUTION:Do not reach into the washer while operating. Steam"
+    },
+    {
+      "title": "!",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 562,
+      "end_line": 568,
+      "content_preview": "<!-- ! --> can cause severe burns. ---"
+    },
+    {
+      "title": "SteamFreshTM cycle",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 569,
+      "end_line": 583,
+      "content_preview": "<!-- SteamFreshTM cycle --> ?For slightly wrinkled clothes which have been stored for an extended time. It makes wrinkle"
+    },
+    {
+      "title": "Precautionary Notes:",
+      "category": "SAFETY",
+      "confidence": 0.9,
+      "start_line": 584,
+      "end_line": 594,
+      "content_preview": "<!-- Precautionary Notes: --> - The SteamFreshTM cycle is not like other washing or drying cycles. - Due to the characte"
+    },
+    {
+      "title": "- Do not load the following items:",
+      "category": "SAFETY",
+      "confidence": 0.9,
+      "start_line": 595,
+      "end_line": 595,
+      "content_preview": ""
+    },
+    {
+      "title": "Wool, blankets, leather jackets, silk, wet clothes,",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 596,
+      "end_line": 602,
+      "content_preview": "<!-- Wool, blankets, leather jackets, silk, wet clothes, --> lingerie, foam products, or electric blankets. - After remo"
+    },
+    {
+      "title": "CAUTION:",
+      "category": "SAFETY",
+      "confidence": 0.9,
+      "start_line": 603,
+      "end_line": 603,
+      "content_preview": ""
+    },
+    {
+      "title": "!",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 604,
+      "end_line": 611,
+      "content_preview": "- Do not reach into the washer while operating. Steam - Keep pets away from the washer. 6. Wash/Rinse Temperature ? Sele"
+    },
+    {
+      "title": "Extra Hot",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 612,
+      "end_line": 612,
+      "content_preview": ""
+    },
+    {
+      "title": "Hot",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 613,
+      "end_line": 613,
+      "content_preview": ""
+    },
+    {
+      "title": "Most loads",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 614,
+      "end_line": 614,
+      "content_preview": ""
+    },
+    {
+      "title": "Warm",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 615,
+      "end_line": 615,
+      "content_preview": ""
+    },
+    {
+      "title": "Brightly colored items,washable woolens",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 616,
+      "end_line": 616,
+      "content_preview": ""
+    },
+    {
+      "title": "Cold",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 617,
+      "end_line": 642,
+      "content_preview": "<!-- Cold --> ? Warm rinses leave the loads dryer than cold rinses. Warm rinses increase wrinkling. ?In cold climates, a"
+    },
+    {
+      "title": "OPTION",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 643,
+      "end_line": 663,
+      "content_preview": "<!-- OPTION --> 1. Prewash ? Use this option for loads that need pretreatment. Adds16 minutes prewash and a spin cycle. "
+    },
+    {
+      "title": "SELECT A LANGUAGE",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 664,
+      "end_line": 664,
+      "content_preview": ""
+    },
+    {
+      "title": "ESPANOL",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 665,
+      "end_line": 665,
+      "content_preview": ""
+    },
+    {
+      "title": "FRANCAIS",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 666,
+      "end_line": 684,
+      "content_preview": "? Repeated presses of the Water Plus button will cyclethrough \"FRANCAIS\"(French), \"ESPANOL\"(Spanish),and then back to En"
+    },
+    {
+      "title": "CHILD LOCK",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 685,
+      "end_line": 689,
+      "content_preview": "<!-- CHILD LOCK --> ? Use this option to prevent unwanted use of the washer.Press and hold PRE WASH button for 3 seconds"
+    },
+    {
+      "title": "DOOR LOCKED",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 690,
+      "end_line": 690,
+      "content_preview": ""
+    },
+    {
+      "title": "DOOR LOCK",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 691,
+      "end_line": 700,
+      "content_preview": "<!-- DOOR LOCK --> ? Displays whenever the door of the washer is locked. ? The door can be unlocked by pressing theStart"
+    },
+    {
+      "title": "MAINTENANCE",
+      "category": "MAINTENANCE",
+      "confidence": 1.0,
+      "start_line": 701,
+      "end_line": 712,
+      "content_preview": "<!-- MAINTENANCE --> Before cleaning the washer interior, unplug the electrical power cord to avoid electrical shock haz"
+    },
+    {
+      "title": "■The water inlet filter",
+      "category": "MAINTENANCE",
+      "confidence": 0.9,
+      "start_line": 704,
+      "end_line": 710,
+      "content_preview": "?\"\" error message will blink on the control panel when water does not enter the dispenser. ?If your water is very hard o"
+    },
+    {
+      "title": "■The drain pump filter",
+      "category": "MAINTENANCE",
+      "confidence": 0.9,
+      "start_line": 711,
+      "end_line": 712,
+      "content_preview": "? The drain filter collects threads and small objects left in the laundry.Check regularly that the filter is clean to en"
+    },
+    {
+      "title": "CAUTION",
+      "category": "SAFETY",
+      "confidence": 1.0,
+      "start_line": 713,
+      "end_line": 734,
+      "content_preview": "<!-- CAUTION --> Drain, using the drain hose, before opening the pump filter to remove objects.Be careful when draining "
+    },
+    {
+      "title": "Press down the lock tab",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 735,
+      "end_line": 755,
+      "content_preview": "<!-- Press down the lock tab --> Pull the dispenserdrawer out until it stops.2 on the bleach insert.Remove the drawer.3 "
+    },
+    {
+      "title": "■The washing drum",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 747,
+      "end_line": 755,
+      "content_preview": "? Remove items from the washer as soon as the cycle is completed. Wrinkling, color transfer, and odors may beproduced in"
+    },
+    {
+      "title": "Remove the liquid detergentbox, softener and bleach",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 756,
+      "end_line": 782,
+      "content_preview": "<!-- Remove the liquid detergentbox, softener and bleach --> inserts from theircompartments. MAX ---"
+    },
+    {
+      "title": "!",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 783,
+      "end_line": 800,
+      "content_preview": "play inside the washer while it is open for drying.NOTE: Remove hard water deposits using only cleaners labeled as safe "
+    },
+    {
+      "title": "■Winterizing instructions",
+      "category": "OPERATION",
+      "confidence": 0.9,
+      "start_line": 785,
+      "end_line": 800,
+      "content_preview": "If the washer is stored in an area where freezing can occur or moved in freezing temperatures, follow these winterizing "
+    },
+    {
+      "title": "TROUBLESHOOTING GUIDE",
+      "category": "TROUBLESHOOTING",
+      "confidence": 0.9,
+      "start_line": 801,
+      "end_line": 804,
+      "content_preview": "<!-- TROUBLESHOOTING GUIDE --> ?This washing machine is equipped with automatic safety functions which detect and diagno"
+    },
+    {
+      "title": "ProblemPossible CauseSolution",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 805,
+      "end_line": 807,
+      "content_preview": "<!-- ProblemPossible CauseSolution --> ? Foreign objects such as coins"
+    },
+    {
+      "title": "Rattling and clanking noise",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 808,
+      "end_line": 812,
+      "content_preview": "<!-- Rattling and clanking noise --> or safety pins may be in drum or pump. ? Heavy wash loads mayproduce a thumping sou"
+    },
+    {
+      "title": "Thumping sound",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 813,
+      "end_line": 815,
+      "content_preview": "<!-- Thumping sound --> ? Have all the transit bolts andpacking been removed?"
+    },
+    {
+      "title": "Vibrating noise",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 816,
+      "end_line": 820,
+      "content_preview": "<!-- Vibrating noise --> ? Wash load may be unevenlydistributed in the drum. ? Are all the feet resting firmlyon the gro"
+    },
+    {
+      "title": "Water leaks",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 821,
+      "end_line": 826,
+      "content_preview": "<!-- Water leaks --> tap or washer. ? House drain pipes are clogged. ? Too much detergent orunsuitable detergent."
+    },
+    {
+      "title": "Excessive suds",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 827,
+      "end_line": 833,
+      "content_preview": "<!-- Excessive suds --> ? Water supply is not adequatein area. Water does not enterwasher or it enters slowly ? Water su"
+    },
+    {
+      "title": "Stop washer and check drum and drain",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 834,
+      "end_line": 837,
+      "content_preview": "<!-- Stop washer and check drum and drain --> filter. If noise continues after washer is restarted,call for service."
+    },
+    {
+      "title": "If sound continues, washer is probably out",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 838,
+      "end_line": 849,
+      "content_preview": "<!-- If sound continues, washer is probably out --> of balance. Stop and redistribute wash See Installation Instructions"
+    },
+    {
+      "title": "Fully open tap.",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 850,
+      "end_line": 858,
+      "content_preview": "<!-- Fully open tap. --> Straighten hose. Check the filter of the inlet hose. ---"
+    },
+    {
+      "title": "Water in the washer does",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 859,
+      "end_line": 863,
+      "content_preview": "<!-- Water in the washer does --> not drain or drains slowly ? The drain filter is clogged. ? Electrical power cord may "
+    },
+    {
+      "title": "Washer does not start",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 864,
+      "end_line": 869,
+      "content_preview": "<!-- Washer does not start --> ? House fuse is blown, circuitbreaker tripped, or a poweroutage has occurred. ? Water sup"
+    },
+    {
+      "title": "Washer won't spin",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 870,
+      "end_line": 872,
+      "content_preview": "<!-- Washer won't spin --> ? The washing time may vary bythe amount of laundry, water"
+    },
+    {
+      "title": "Wash cycle time delayed",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 873,
+      "end_line": 875,
+      "content_preview": "<!-- Wash cycle time delayed --> pressure, water temperature,and other using conditions."
+    },
+    {
+      "title": "RLM problem",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 876,
+      "end_line": 878,
+      "content_preview": "<!-- RLM problem --> ? Do not use HE detergent."
+    },
+    {
+      "title": "Washer odor",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 879,
+      "end_line": 885,
+      "content_preview": "<!-- Washer odor --> ? Stain under the door seal. ? The water temperature or the The door cannot beunlocked by pressing "
+    },
+    {
+      "title": "Normal sounds that may be heard:",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 886,
+      "end_line": 893,
+      "content_preview": "<!-- Normal sounds that may be heard: --> - Clicking: When the door is locked or unlocked. - Spraying: When the steam is"
+    },
+    {
+      "title": "Make sure plug fits tightly in wall",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 894,
+      "end_line": 897,
+      "content_preview": "<!-- Make sure plug fits tightly in wall --> outlet. Reset circuit breaker or replace fuse.Do not increase fuse capacity"
+    },
+    {
+      "title": "If problem is a circuit overload, have",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 898,
+      "end_line": 928,
+      "content_preview": "<!-- If problem is a circuit overload, have --> it corrected by a qualified electrician. Turn on water supply tap. Close"
+    },
+    {
+      "title": "F",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 929,
+      "end_line": 950,
+      "content_preview": "<!-- F --> power failure. Straighten hose.Check the filter of the inlet hose. Add 1 or 2 similar items to helpbalance th"
+    },
+    {
+      "title": "NOTES",
+      "category": "GENERAL",
+      "confidence": 0.5,
+      "start_line": 951,
+      "end_line": 998,
+      "content_preview": "## Figures (45 total) - Figure 1: page 1 - Figure 2: page 1 - Figure 3: page 2"
+    }
+  ],
+  "figures": [
+    {
+      "label": "Table o",
+      "page_hint": null,
+      "line_num": 3
+    },
+    {
+      "label": "[Image on page 1, position: middle]",
+      "page_hint": 1,
+      "line_num": 33
+    },
+    {
+      "label": "[Image on page 2, position: middle]",
+      "page_hint": 2,
+      "line_num": 50
+    },
+    {
+      "label": "[Image on page 3, position: middle]",
+      "page_hint": 3,
+      "line_num": 79
+    },
+    {
+      "label": "[Image on page 4, position: middle]",
+      "page_hint": 4,
+      "line_num": 119
+    },
+    {
+      "label": "[Image on page 5, position: middle]",
+      "page_hint": 5,
+      "line_num": 146
+    },
+    {
+      "label": "[Image on page 6, position: middle]",
+      "page_hint": 6,
+      "line_num": 175
+    },
+    {
+      "label": "[Image on page 7, position: middle]",
+      "page_hint": 7,
+      "line_num": 226
+    },
+    {
+      "label": "[Image on page 8, position: middle]",
+      "page_hint": 8,
+      "line_num": 260
+    },
+    {
+      "label": "[Image on page 9, position: middle]",
+      "page_hint": 9,
+      "line_num": 287
+    },
+    {
+      "label": "table f",
+      "page_hint": null,
+      "line_num": 310
+    },
+    {
+      "label": "table a",
+      "page_hint": null,
+      "line_num": 316
+    },
+    {
+      "label": "[Image on page 10, position: middle]",
+      "page_hint": 10,
+      "line_num": 332
+    },
+    {
+      "label": "[Image on page 11, position: middle]",
+      "page_hint": 11,
+      "line_num": 353
+    },
+    {
+      "label": "[Image on page 12, position: middle]",
+      "page_hint": 12,
+      "line_num": 379
+    },
+    {
+      "label": "[Image on page 13, position: middle]",
+      "page_hint": 13,
+      "line_num": 413
+    },
+    {
+      "label": "table c",
+      "page_hint": null,
+      "line_num": 445
+    },
+    {
+      "label": "[Image on page 14, position: middle]",
+      "page_hint": 14,
+      "line_num": 508
+    },
+    {
+      "label": "[Image on page 15, position: middle]",
+      "page_hint": 15,
+      "line_num": 568
+    },
+    {
+      "label": "table t",
+      "page_hint": null,
+      "line_num": 622
+    },
+    {
+      "label": "[Image on page 16, position: middle]",
+      "page_hint": 16,
+      "line_num": 642
+    },
+    {
+      "label": "[Image on page 17, position: middle]",
+      "page_hint": 17,
+      "line_num": 700
+    },
+    {
+      "label": "[Image on page 18, position: middle]",
+      "page_hint": 18,
+      "line_num": 732
+    },
+    {
+      "label": "table f",
+      "page_hint": null,
+      "line_num": 752
+    },
+    {
+      "label": "[Image on page 19, position: middle]",
+      "page_hint": 19,
+      "line_num": 763
+    },
+    {
+      "label": "[Image on page 20, position: middle]",
+      "page_hint": 20,
+      "line_num": 800
+    },
+    {
+      "label": "table d",
+      "page_hint": null,
+      "line_num": 826
+    },
+    {
+      "label": "[Image on page 21, position: middle]",
+      "page_hint": 21,
+      "line_num": 857
+    },
+    {
+      "label": "[Image on page 22, position: middle]",
+      "page_hint": 22,
+      "line_num": 911
+    },
+    {
+      "label": "[Image on page 23, position: middle]",
+      "page_hint": 23,
+      "line_num": 944
+    },
+    {
+      "label": "[Image on page 24, position: middle]",
+      "page_hint": 24,
+      "line_num": 950
+    },
+    {
+      "label": "Figure 1",
+      "page_hint": null,
+      "line_num": 954
+    },
+    {
+      "label": "Figure 2",
+      "page_hint": null,
+      "line_num": 955
+    },
+    {
+      "label": "Figure 3",
+      "page_hint": null,
+      "line_num": 956
+    },
+    {
+      "label": "Figure 4",
+      "page_hint": null,
+      "line_num": 957
+    },
+    {
+      "label": "Figure 5",
+      "page_hint": null,
+      "line_num": 958
+    },
+    {
+      "label": "Figure 6",
+      "page_hint": null,
+      "line_num": 959
+    },
+    {
+      "label": "Figure 7",
+      "page_hint": null,
+      "line_num": 960
+    },
+    {
+      "label": "Figure 8",
+      "page_hint": null,
+      "line_num": 961
+    },
+    {
+      "label": "Figure 9",
+      "page_hint": null,
+      "line_num": 962
+    },
+    {
+      "label": "Figure 10",
+      "page_hint": null,
+      "line_num": 963
+    },
+    {
+      "label": "Figure 11",
+      "page_hint": null,
+      "line_num": 964
+    },
+    {
+      "label": "Figure 12",
+      "page_hint": null,
+      "line_num": 965
+    },
+    {
+      "label": "Figure 13",
+      "page_hint": null,
+      "line_num": 966
+    },
+    {
+      "label": "Figure 14",
+      "page_hint": null,
+      "line_num": 967
+    },
+    {
+      "label": "Figure 15",
+      "page_hint": null,
+      "line_num": 968
+    },
+    {
+      "label": "Figure 16",
+      "page_hint": null,
+      "line_num": 969
+    },
+    {
+      "label": "Figure 17",
+      "page_hint": null,
+      "line_num": 970
+    },
+    {
+      "label": "Figure 18",
+      "page_hint": null,
+      "line_num": 971
+    },
+    {
+      "label": "Figure 19",
+      "page_hint": null,
+      "line_num": 972
+    },
+    {
+      "label": "Figure 20",
+      "page_hint": null,
+      "line_num": 973
+    },
+    {
+      "label": "Figure 21",
+      "page_hint": null,
+      "line_num": 974
+    },
+    {
+      "label": "Figure 22",
+      "page_hint": null,
+      "line_num": 975
+    },
+    {
+      "label": "Figure 23",
+      "page_hint": null,
+      "line_num": 976
+    },
+    {
+      "label": "Figure 24",
+      "page_hint": null,
+      "line_num": 977
+    },
+    {
+      "label": "Figure 25",
+      "page_hint": null,
+      "line_num": 978
+    },
+    {
+      "label": "Figure 26",
+      "page_hint": null,
+      "line_num": 979
+    },
+    {
+      "label": "Figure 27",
+      "page_hint": null,
+      "line_num": 980
+    },
+    {
+      "label": "Figure 28",
+      "page_hint": null,
+      "line_num": 981
+    },
+    {
+      "label": "Figure 29",
+      "page_hint": null,
+      "line_num": 982
+    },
+    {
+      "label": "Figure 30",
+      "page_hint": null,
+      "line_num": 983
+    },
+    {
+      "label": "Figure 31",
+      "page_hint": null,
+      "line_num": 984
+    },
+    {
+      "label": "Figure 32",
+      "page_hint": null,
+      "line_num": 985
+    },
+    {
+      "label": "Figure 33",
+      "page_hint": null,
+      "line_num": 986
+    },
+    {
+      "label": "Figure 34",
+      "page_hint": null,
+      "line_num": 987
+    },
+    {
+      "label": "Figure 35",
+      "page_hint": null,
+      "line_num": 988
+    },
+    {
+      "label": "Figure 36",
+      "page_hint": null,
+      "line_num": 989
+    },
+    {
+      "label": "Figure 37",
+      "page_hint": null,
+      "line_num": 990
+    },
+    {
+      "label": "Figure 38",
+      "page_hint": null,
+      "line_num": 991
+    },
+    {
+      "label": "Figure 39",
+      "page_hint": null,
+      "line_num": 992
+    },
+    {
+      "label": "Figure 40",
+      "page_hint": null,
+      "line_num": 993
+    },
+    {
+      "label": "Figure 41",
+      "page_hint": null,
+      "line_num": 994
+    },
+    {
+      "label": "Figure 42",
+      "page_hint": null,
+      "line_num": 995
+    },
+    {
+      "label": "Figure 43",
+      "page_hint": null,
+      "line_num": 996
+    },
+    {
+      "label": "Figure 44",
+      "page_hint": null,
+      "line_num": 997
+    },
+    {
+      "label": "Figure 45",
+      "page_hint": null,
+      "line_num": 998
+    }
+  ],
+  "cross_refs": [],
+  "total_lines": 998
+}
