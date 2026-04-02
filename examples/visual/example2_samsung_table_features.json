@@ -1,0 +1,12 @@
+{
+  "text_len": 1345,
+  "text_density": 86.92,
+  "icon_density": 0.0,
+  "line_variance": 57.85,
+  "image_count": 0,
+  "has_index_table": false,
+  "is_structural_diagram": false,
+  "has_complex_tables": true,
+  "strategy": "TABLE_RESCUE",
+  "page": 32
+}

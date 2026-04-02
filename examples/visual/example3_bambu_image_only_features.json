@@ -1,0 +1,12 @@
+{
+  "text_len": 8,
+  "text_density": 0.04,
+  "icon_density": 0.3302,
+  "line_variance": 0.0,
+  "image_count": 5,
+  "has_index_table": false,
+  "is_structural_diagram": false,
+  "has_complex_tables": false,
+  "strategy": "FULL_VLM",
+  "page": 19
+}

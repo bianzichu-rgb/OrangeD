@@ -179,7 +179,15 @@ Every extraction is scored across 5 dimensions with **partition-aware weights** 
 | `structural_consistency` | Cross-refs valid, section coverage, reading order |
 | `table_integrity` | Column counts match, separator rows present |
 
-The judge evaluates **structural and syntactic quality**, not semantic accuracy against a ground truth. A high score means the output Markdown is well-formed and internally consistent. See [benchmarks/METHODOLOGY.md](benchmarks/METHODOLOGY.md) for full scoring details.
+The judge evaluates **structural and syntactic quality**, not semantic accuracy against a ground truth. See [benchmarks/METHODOLOGY.md](benchmarks/METHODOLOGY.md) for full scoring details.
+
+### How to interpret scores
+
+| Score Range | Meaning | Recommended Action |
+|:---|:---|:---|
+| **0.90+** | Structurally solid — clean headings, valid tables, consistent cross-refs | Safe for downstream consumption (RAG, search indexing, LLM context) |
+| **0.70 – 0.90** | Usable but imperfect — some table structure issues or heading gaps | Spot-check tables and heading hierarchy before production use |
+| **< 0.70** | Needs attention — significant structural problems detected | Enable stronger OCR adapter or inspect specific failing dimensions |
 
 ```python
 from oranged.judge import Judge5D
@@ -242,7 +250,50 @@ Tested on 5 real-world appliance manuals. **Native extraction only** — no OCR 
 - Speed varies from 3.4 to 31.6 pages/s depending on document complexity. Bosch is fastest because its pages are dense, uniform text blocks. LG is slowest because it has many mixed text+image pages requiring more layout analysis.
 - Section classification recovered up to 7 distinct categories per document.
 
-**Full artifacts** (extracted Markdown, route logs, judge reports) for LG, Bosch, and Bambu Lab are available in [`benchmarks/results/`](benchmarks/results/).
+**Visual examples** showing original PDF pages, routing decisions, and extracted Markdown side-by-side: [examples/VISUAL_EXAMPLES.md](examples/VISUAL_EXAMPLES.md)
+
+**Full artifacts** for LG, Bosch, and Bambu Lab:
+
+| Document | Extracted Markdown | Route Log | Judge Report | Section Analysis |
+|:---|:---|:---|:---|:---|
+| LG Washer | [output.md](benchmarks/results/lg_washer_output.md) | [route_log.json](benchmarks/results/lg_washer_route_log.json) | [judge_report.json](benchmarks/results/lg_washer_judge_report.json) | [analysis.json](benchmarks/results/lg_washer_analysis.json) |
+| Bosch AC | [output.md](benchmarks/results/bosch_ac_output.md) | [route_log.json](benchmarks/results/bosch_ac_route_log.json) | [judge_report.json](benchmarks/results/bosch_ac_judge_report.json) | [analysis.json](benchmarks/results/bosch_ac_analysis.json) |
+| Bambu Lab | [output.md](benchmarks/results/bambu_3d_output.md) | [route_log.json](benchmarks/results/bambu_3d_route_log.json) | [judge_report.json](benchmarks/results/bambu_3d_judge_report.json) | [analysis.json](benchmarks/results/bambu_3d_analysis.json) |
+
+---
+
+## Token & Cost Analysis
+
+A key advantage of native-first extraction: **you don't pay per-page API costs for pages that don't need OCR/VLM.**
+
+### How tokens are consumed
+
+| Approach | Input Tokens | Output Tokens | Per-Page Cost |
+|:---|:---|:---|:---|
+| **Full VLM** (send every page as image) | ~1,100 tokens/page (image) | ~300 tokens/page | Varies by API |
+| **Full OCR** (PaddleOCR local) | 0 (local GPU) | 0 | GPU time only |
+| **OrangeD native** | 0 | 0 | CPU time only |
+| **OrangeD hybrid** (native + VLM for ~20% pages) | ~220 tokens/page avg | ~60 tokens/page avg | 80% reduction |
+
+### Cost comparison at scale
+
+Estimated costs for processing 10,000 pages of appliance manuals:
+
+| Approach | Gemini 2.0 Flash | GPT-4o | Claude Sonnet |
+|:---|:---|:---|:---|
+| **Full VLM** (all pages) | $2.30 | $57.50 | $78.00 |
+| **OrangeD hybrid** (20% pages to VLM) | $0.46 | $11.50 | $15.60 |
+| **OrangeD native only** | $0.00 | $0.00 | $0.00 |
+
+**Assumptions:** ~1,100 input tokens per page image, ~300 output tokens per page. Gemini 2.0 Flash: $0.10/$0.40 per 1M input/output tokens. GPT-4o: $2.50/$10.00. Claude Sonnet: $3.00/$15.00. "20% pages need VLM" is based on our benchmark routing data where ~80% of digital-born manual pages are extractable natively.
+
+### Downstream token consumption
+
+OrangeD's output is structured Markdown, which is significantly more token-efficient than raw OCR text when fed into downstream LLMs (for RAG, Q&A, summarization):
+
+- Native Markdown with headings, tables, and cross-references compresses better in LLM context windows
+- Section classification lets you feed only the relevant section (e.g., just "TROUBLESHOOTING") instead of the entire document
+- A 42-page Samsung manual produces ~50,000 chars (~20,000 tokens) of structured Markdown — compared to ~46,000 tokens of raw image input if sent page-by-page to a VLM
 
 ---
 
@@ -277,3 +328,69 @@ OrangeD's extraction engine is ported from CognoLiving 2.0, a document intellige
 ## License
 
 Apache 2.0 — see [LICENSE](LICENSE).
+
+---
+
+<details>
+<summary><b>中文说明 (Chinese)</b></summary>
+
+# OrangeD — 混合智能 PDF 转 Markdown 管线
+
+**原生优先提取 + 智能 OCR/VLM 兜底路由 + 五维质量评分 + 语义文档分类**
+
+## 核心理念
+
+> 能原生提取的不跑 OCR，能 OCR 搞定的不上 VLM，按页智能路由。
+
+大多数 PDF 提取工具采用"一刀切"策略：PaddleOCR 对每一页都跑全量 OCR，GLM-4V 把所有页面都送进大模型。
+OrangeD 的做法是：**先检查每页内容特征，再选择最省算力的策略。**
+
+对于数字原生 PDF（非扫描件），大部分页面可以直接通过 PyMuPDF 原生提取，零 GPU、毫秒级完成。只有真正需要视觉理解的页面才会调用 OCR/VLM。
+
+## 六种路由策略
+
+| 策略 | 触发条件 | GPU | 方法 |
+|:---|:---|:---|:---|
+| `NATIVE` | 文字密度高，数字原生 | 无 | PyMuPDF 直接提取 |
+| `TABLE_RESCUE` | 检测到复杂表格 | 是 | 裁剪表格区域 → VLM 修复 |
+| `ICON_SNIPER` | 图标密集（控制面板、按钮） | 是 | 视觉模型图标→文字 |
+| `SMART_REDUCE` | 图片 + 相邻文字索引表 | 少量 | 提取文字表，标记图片 |
+| `SPATIAL_TOPOLOGY` | 结构图 + 编号标注 | 是 | VLM 空间位置分析 |
+| `FULL_VLM` | 扫描件 / 纯图片页面 | 是 | 全量 OCR 或 VLM 推理 |
+
+## 五维质量评分（Judge5D）
+
+| 维度 | 评测内容 |
+|:---|:---|
+| `format_compliance` | Markdown 语法有效性 |
+| `heading_hierarchy` | 标题层级完整，无跳级 |
+| `content_accuracy` | 信息保留度，垃圾字符残留 |
+| `structural_consistency` | 交叉引用有效性，章节覆盖率 |
+| `table_integrity` | 表格列数一致，分隔行完整 |
+
+评分采用**分区感知权重**：故障排查章节侧重表格完整度，安全警告章节侧重内容准确率。
+
+## Token 消耗对比
+
+| 方案 | 10,000 页成本 (Gemini Flash) | 10,000 页成本 (GPT-4o) |
+|:---|:---|:---|
+| 全量 VLM（所有页发图片） | $2.30 | $57.50 |
+| OrangeD 混合（20% 页面走 VLM） | $0.46 | $11.50 |
+| OrangeD 纯原生 | $0.00 | $0.00 |
+
+## 适配器系统
+
+支持插拔式 OCR/VLM 后端：PaddleOCR、Qwen-VL（本地 GPU）、Gemini（云端）、GLM-4V（智谱 AI）。
+
+## 已知局限
+
+- v0.1.0 仅验证了原生提取路径，OCR 适配器尚未端到端跑通基准测试
+- 质量评分衡量结构完整性，不是语义准确率
+- 主要针对家电说明书场景优化，其他文档类型未测试
+- 基准测试目前仅包含英文/多语言文档
+
+## 起源
+
+OrangeD 的提取引擎移植自 CognoLiving 2.0——一个面向家电说明书大规模处理的文档智能系统。母系统包含自学习启发式引擎、品牌修正脚本、神经路由等更多能力，未包含在本次开源中。
+
+</details>

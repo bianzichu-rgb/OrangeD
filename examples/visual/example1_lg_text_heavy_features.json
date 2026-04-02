@@ -1,0 +1,12 @@
+{
+  "text_len": 3368,
+  "text_density": 169.15,
+  "icon_density": 1.0,
+  "line_variance": 620.33,
+  "image_count": 1,
+  "has_index_table": false,
+  "is_structural_diagram": false,
+  "has_complex_tables": false,
+  "strategy": "ICON_SNIPER",
+  "page": 3
+}
