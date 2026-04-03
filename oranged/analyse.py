@@ -1,8 +1,10 @@
 """
 orangeD — Semantic document structure classifier.
 
-Classifies document sections into 9 categories with multilingual keyword
+Classifies document sections into 13 categories with multilingual keyword
 matching (CN/EN/JP). Zero external dependencies beyond stdlib.
+
+Domains: appliance manuals (original 9), academic papers, teaching materials.
 
 Ported from CognoLiving 2.0 (schema_mapper, hams_visual_assembler).
 """
@@ -12,7 +14,8 @@ import json
 from typing import List, Dict, Optional, Tuple
 from dataclasses import dataclass, field, asdict
 
-# ─── Section Categories (9-Quadrant Taxonomy) ────────────────────────────────
+# ─── Section Categories (13-Category Taxonomy) ───────────────────────────────
+# Original 9: appliance manuals.  +4: academic papers & teaching materials.
 
 CATEGORIES = {
     "SAFETY": {
@@ -77,6 +80,56 @@ CATEGORIES = {
         "keywords_en": ["recipe", "cooking", "baking", "use case", "tips",
                         "recommended", "applications"],
         "keywords_ja": ["レシピ", "調理"],
+    },
+    # ─── Academic Paper Categories ───────────────────────────────────────────
+    "ABSTRACT": {
+        "keywords_zh": ["摘要", "概述", "综述", "引言", "导论", "前言", "背景",
+                        "研究背景", "文献综述", "研究目的"],
+        "keywords_en": ["abstract", "introduction", "overview", "background",
+                        "literature review", "related work", "motivation",
+                        "research objective", "purpose", "preamble"],
+        "keywords_ja": ["要旨", "概要", "序論", "はじめに", "背景"],
+    },
+    "METHODOLOGY": {
+        "keywords_zh": ["方法", "方法论", "实验", "实验设计", "实验方法", "研究方法",
+                        "材料与方法", "数据集", "评估方法", "模型", "算法",
+                        "实验结果", "结果", "讨论", "结论", "分析", "总结",
+                        "致谢", "参考文献", "附录"],
+        "keywords_en": ["method", "methodology", "experiment", "experimental",
+                        "materials and methods", "dataset", "evaluation",
+                        "model", "algorithm", "approach", "framework",
+                        "results", "discussion", "conclusion", "analysis",
+                        "findings", "acknowledgment", "references", "appendix",
+                        "bibliography", "future work"],
+        "keywords_ja": ["方法", "実験", "手法", "結果", "考察", "結論",
+                        "参考文献", "付録"],
+    },
+    "MATH_FORMULA": {
+        "keywords_zh": ["公式", "定理", "引理", "证明", "推论", "命题", "定义",
+                        "方程", "等式", "不等式", "函数", "微积分", "线性代数",
+                        "概率", "统计", "数学模型", "解题", "计算"],
+        "keywords_en": ["theorem", "lemma", "proof", "corollary", "proposition",
+                        "definition", "equation", "formula", "calculus",
+                        "linear algebra", "probability", "statistics",
+                        "mathematical model", "derivation", "notation"],
+        "keywords_ja": ["定理", "証明", "公式", "方程式", "定義"],
+    },
+    # ─── Teaching Material Categories ────────────────────────────────────────
+    "TEACHING": {
+        "keywords_zh": ["教案", "教学目标", "教学目的", "课程", "学习目标",
+                        "教学内容", "教学过程", "教学设计", "课时", "教学重点",
+                        "教学难点", "教学方法", "教学准备", "教学反思",
+                        "练习", "作业", "习题", "考试", "测验", "课后",
+                        "预习", "复习", "知识点", "大纲", "教学计划",
+                        "学时", "学分", "课程目标", "教学活动"],
+        "keywords_en": ["lesson plan", "learning objective", "curriculum",
+                        "syllabus", "course outline", "teaching method",
+                        "assessment", "exercise", "homework", "assignment",
+                        "exam", "quiz", "grading", "rubric", "lecture",
+                        "tutorial", "seminar", "workshop", "module",
+                        "learning outcome", "prerequisite", "credit"],
+        "keywords_ja": ["教案", "学習目標", "カリキュラム", "授業", "課題",
+                        "演習", "試験", "シラバス"],
     },
 }
 

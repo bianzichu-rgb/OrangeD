@@ -12,13 +12,14 @@
 
 | Component | Status | Notes |
 |:---|:---|:---|
-| Native extraction (digital-born PDF) | **Stable** | Tested on 5 real manuals, 124 total pages |
+| Native extraction (digital-born PDF) | **Production** | 2,000+ manuals processed in parent system; 5 open-sourced benchmarks |
 | Strategy router (per-page decision) | **Stable** | 6 strategies, deterministic rules |
 | Judge5D (structural quality scoring) | **Stable** | Structural/syntactic only — not semantic accuracy |
-| Section classifier (9-category) | **Stable** | CN/EN/JP keywords, appliance manuals |
+| Section classifier (13-category) | **Stable** | CN/EN/JP keywords; appliance manuals + academic papers + teaching materials |
+| Math/formula preservation | **New** | Unicode math → LaTeX conversion, inline/display detection |
 | OCR/VLM adapters (PaddleOCR, Qwen, Gemini, GLM) | **Experimental** | Interfaces defined, not end-to-end benchmarked |
 
-**Verified scope:** Appliance manuals (digital-born). Other document types (academic papers, legal, etc.) are untested.
+**Verified scope:** The extraction engine has processed **2,000+ appliance manuals** in its parent system (CognoLiving 2.0). The open-source benchmarks include 5 representative samples. Academic paper and teaching material classifiers are newly added — keyword-based, not yet benchmarked on large corpora.
 
 ---
 
@@ -53,7 +54,7 @@ The table below shows **design choices**, not benchmarked outcomes. We have not 
 | **Scanned PDF** | Pluggable adapters (experimental) | Native OCR | Native VLM | Native |
 | **Heading recovery** | Font-size hierarchy + breadcrumb | None | Limited | Rule-based |
 | **Quality judge** | 5D structural scoring | None | None | Limited |
-| **Section classification** | 9-category, CN/EN/JP | None | None | None |
+| **Section classification** | 13-category, CN/EN/JP | None | None | None |
 | **Core dependency** | pymupdf (~30MB) | ~1.5GB | ~10GB+ | ~500MB |
 
 ---
@@ -150,7 +151,7 @@ oranged benchmark manual.pdf -o results.json # Run benchmark
 │  Partition-aware weights per section type                     │
 ├──────────────────────────────────────────────────────────────┤
 │  Layer 4: Semantic Analysis                                   │
-│  9-category classifier (Safety / Install / Operation / ...)   │
+│  13-category classifier (Safety / Install / Abstract / Math…)  │
 │  Figure registry + cross-reference binding                    │
 ├──────────────────────────────────────────────────────────────┤
 │  Layer 3: Post-Processing                                     │
@@ -320,7 +321,7 @@ A key advantage of native-first extraction: **you don't pay per-page API costs f
 - **Native path only in v0.1.0.** Pages routed to `FULL_VLM` or `ICON_SNIPER` produce placeholder output unless an OCR adapter is configured.
 - **No ground truth comparison.** Quality scores are structural, not semantic. Human evaluation has not been conducted.
 - **No cross-tool benchmark yet.** Side-by-side comparisons with PaddleOCR, MinerU, or GLM-OCR under identical conditions are planned.
-- **Appliance manual focus.** The 9-category taxonomy and heuristics are tuned for appliance manuals. Other document types (academic papers, legal contracts, etc.) are untested.
+- **Appliance manual focus.** The taxonomy was originally tuned for appliance manuals (9 categories). Academic paper and teaching material categories (4 new) are keyword-based and not yet validated on large corpora.
 - **Benchmark set is English-only.** The classifier supports CN/EN/JP keywords, but benchmark documents are English/multilingual only.
 
 ---
@@ -335,7 +336,7 @@ A key advantage of native-first extraction: **you don't pay per-page API costs f
 **Medium-term**
 - [ ] Layout visualization / debug mode: visual diff between source PDF and extracted Markdown
 - [ ] Multilingual evaluation set (CN/JP/DE documents)
-- [ ] Broader document types: academic papers, formulas/math, teaching materials
+- [x] ~~Broader document types: academic papers, formulas/math, teaching materials~~ — classifiers added (v0.2.0), benchmarks pending
 
 **Ideas / Contributions Welcome**
 - [ ] Self-learning brand heuristic auto-generation from extraction failures
@@ -346,7 +347,7 @@ A key advantage of native-first extraction: **you don't pay per-page API costs f
 
 ## Origin
 
-OrangeD's extraction engine is ported from CognoLiving 2.0, a document intelligence system for appliance manual processing. The parent system includes additional capabilities (self-learning heuristic engine, brand-specific correction scripts, neural routing, knowledge database) not included in this open-source release.
+OrangeD's extraction engine is ported from CognoLiving 2.0, a document intelligence system that has processed **2,000+ appliance manuals** in production. The parent system includes additional capabilities (self-learning heuristic engine, brand-specific correction scripts, neural routing, knowledge database) not included in this open-source release.
 
 ---
 
@@ -370,13 +371,14 @@ Apache 2.0 — see [LICENSE](LICENSE).
 
 | 组件 | 状态 | 说明 |
 |:---|:---|:---|
-| 原生提取（数字原生 PDF） | **稳定** | 已在 5 份真实说明书（共 124 页）上验证 |
+| 原生提取（数字原生 PDF） | **生产级** | 母系统已处理 2,000+ 本说明书；开源基准包含 5 份样本 |
 | 策略路由（逐页决策） | **稳定** | 6 种策略，确定性规则 |
 | Judge5D（结构质量评分） | **稳定** | 仅评估结构/语法质量，非语义准确率 |
-| 章节分类器（9 类） | **稳定** | 中/英/日关键词，家电说明书场景 |
+| 章节分类器（13 类） | **稳定** | 中/英/日关键词；家电说明书 + 论文 + 教案 |
+| 数学公式保留 | **新增** | Unicode 数学符号 → LaTeX 转换，行内/独立公式检测 |
 | OCR/VLM 适配器（PaddleOCR、Qwen、Gemini、GLM） | **实验性** | 接口已定义，尚未端到端基准测试 |
 
-**已验证范围：** 家电说明书（数字原生）。其他文档类型（论文、法律文件等）未测试。
+**已验证范围：** 提取引擎已在母系统（CognoLiving 2.0）中处理 **2,000+ 本家电说明书**。开源基准包含 5 份代表性样本。论文和教案分类器为新增功能（关键词匹配），尚未在大规模语料上验证。
 
 ## 核心理念
 
@@ -423,12 +425,12 @@ Apache 2.0 — see [LICENSE](LICENSE).
 
 - v0.1.0 仅验证了原生提取路径，OCR 适配器尚未端到端跑通基准测试
 - 质量评分衡量结构完整性，不是语义准确率
-- 主要针对家电说明书场景优化，其他文档类型未测试
+- 分类体系原为家电说明书优化（9 类），新增论文和教案分类（4 类）尚未大规模验证
 - 基准测试目前仅包含英文/多语言文档
 
 ## 起源
 
-OrangeD 的提取引擎移植自 CognoLiving 2.0——一个面向家电说明书大规模处理的文档智能系统。母系统包含自学习启发式引擎、品牌修正脚本、神经路由等更多能力，未包含在本次开源中。
+OrangeD 的提取引擎移植自 CognoLiving 2.0——一个已在生产环境处理 **2,000+ 本家电说明书**的文档智能系统。母系统包含自学习启发式引擎、品牌修正脚本、神经路由等更多能力，未包含在本次开源中。
 
 ## 许可证
 

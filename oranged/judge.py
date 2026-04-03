@@ -32,6 +32,12 @@ PARTITION_WEIGHTS = {
     "FAQ":             {"format": 0.15, "heading": 0.15, "content": 0.30, "structure": 0.20, "table": 0.20},
     "PARTS":           {"format": 0.20, "heading": 0.10, "content": 0.30, "structure": 0.25, "table": 0.15},
     "RECIPE":          {"format": 0.15, "heading": 0.15, "content": 0.30, "structure": 0.20, "table": 0.20},
+    # Academic papers: content accuracy and structure are critical
+    "ABSTRACT":        {"format": 0.10, "heading": 0.10, "content": 0.45, "structure": 0.25, "table": 0.10},
+    "METHODOLOGY":     {"format": 0.15, "heading": 0.15, "content": 0.35, "structure": 0.20, "table": 0.15},
+    "MATH_FORMULA":    {"format": 0.25, "heading": 0.05, "content": 0.40, "structure": 0.20, "table": 0.10},
+    # Teaching materials: heading hierarchy and structure matter most
+    "TEACHING":        {"format": 0.15, "heading": 0.25, "content": 0.30, "structure": 0.20, "table": 0.10},
 }
 DEFAULT_WEIGHTS = {"format": 0.20, "heading": 0.15, "content": 0.30, "structure": 0.20, "table": 0.15}
 

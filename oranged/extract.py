@@ -421,6 +421,90 @@ class MarkdownPostProcessor:
         return "\n".join(lines)
 
 
+# ─── LaTeX / Math Formula Preservation ───────────────────────────────────────
+
+# Common math symbols that PyMuPDF may extract from PDF fonts
+_MATH_SYMBOL_MAP = {
+    '\u2264': r'\leq', '\u2265': r'\geq', '\u2260': r'\neq',
+    '\u00b1': r'\pm', '\u00d7': r'\times', '\u00f7': r'\div',
+    '\u221a': r'\sqrt{}', '\u221e': r'\infty',
+    '\u2208': r'\in', '\u2209': r'\notin', '\u2282': r'\subset',
+    '\u2283': r'\supset', '\u2286': r'\subseteq', '\u2287': r'\supseteq',
+    '\u222b': r'\int', '\u2211': r'\sum', '\u220f': r'\prod',
+    '\u2202': r'\partial', '\u2207': r'\nabla',
+    '\u0394': r'\Delta', '\u03b1': r'\alpha', '\u03b2': r'\beta',
+    '\u03b3': r'\gamma', '\u03b4': r'\delta', '\u03b5': r'\epsilon',
+    '\u03b8': r'\theta', '\u03bb': r'\lambda', '\u03bc': r'\mu',
+    '\u03c0': r'\pi', '\u03c3': r'\sigma', '\u03c4': r'\tau',
+    '\u03c6': r'\phi', '\u03c8': r'\psi', '\u03c9': r'\omega',
+    '\u2192': r'\rightarrow', '\u2190': r'\leftarrow',
+    '\u21d2': r'\Rightarrow', '\u21d0': r'\Leftarrow',
+    '\u2200': r'\forall', '\u2203': r'\exists',
+    '\u2227': r'\land', '\u2228': r'\lor', '\u00ac': r'\neg',
+    '\u2248': r'\approx', '\u221d': r'\propto', '\u2261': r'\equiv',
+}
+
+# Patterns that indicate a line contains mathematical expressions
+_MATH_INDICATORS = re.compile(
+    r'(?:'
+    r'[=<>≤≥≠±×÷√∞∈∉⊂⊃∫∑∏∂∇Δαβγδεθλμπσφψω∀∃]'
+    r'|\\(?:frac|sqrt|sum|int|prod|lim|log|exp|sin|cos|tan|begin|end)\b'
+    r'|\^\{[^}]+\}'      # superscript groups
+    r'|_\{[^}]+\}'       # subscript groups
+    r'|\$[^$]+\$'        # inline LaTeX
+    r'|\\\[.*?\\\]'      # display LaTeX
+    r'|\\\(.*?\\\)'      # inline LaTeX alt
+    r')'
+)
+
+# Fraction-like patterns: a/b where a,b are short expressions
+_FRACTION_PATTERN = re.compile(
+    r'(?<!\w)([A-Za-z0-9αβγδεθλμπσφψω]+)\s*/\s*([A-Za-z0-9αβγδεθλμπσφψω]+)(?!\w)'
+)
+
+
+def _has_math_content(text: str) -> bool:
+    """Detect if a text line likely contains mathematical notation."""
+    return bool(_MATH_INDICATORS.search(text))
+
+
+def _preserve_math_symbols(text: str) -> str:
+    """Convert Unicode math symbols to LaTeX equivalents wrapped in $...$."""
+    if not _has_math_content(text):
+        return text
+
+    # Already has LaTeX delimiters — don't double-wrap
+    if re.search(r'\$[^$]+\$|\\\[|\\\(', text):
+        return text
+
+    # Count math symbols in the line
+    math_chars = [c for c in text if c in _MATH_SYMBOL_MAP]
+    if not math_chars:
+        return text
+
+    # Replace Unicode math symbols with LaTeX
+    result = text
+    for char, latex in _MATH_SYMBOL_MAP.items():
+        if char in result:
+            result = result.replace(char, latex)
+
+    # Wrap the math-heavy segments in $...$
+    # Simple heuristic: if line is mostly math, wrap the whole thing
+    alpha_ratio = sum(1 for c in text if c.isalpha()) / max(1, len(text))
+    if alpha_ratio < 0.4 and len(math_chars) >= 2:
+        result = f"$${result.strip()}$$"
+    else:
+        # Inline: wrap individual math fragments
+        # Find runs of LaTeX commands and wrap them
+        result = re.sub(
+            r'((?:\\[a-zA-Z]+(?:\{[^}]*\})?[\s]*)+)',
+            lambda m: f' ${m.group(1).strip()}$ ',
+            result
+        )
+
+    return result
+
+
 # ─── Run-on Heading Merger ────────────────────────────────────────────────────
 
 def _merge_runon_headings(md: str) -> str:
@@ -552,6 +636,10 @@ def extract_pdf(pdf_path: str, toc_only: bool = False,
         raw_page_md = enhance_headings(page, raw_page_md)
         raw_page_md = _merge_runon_headings(raw_page_md)
         raw_page_md = clean_text(raw_page_md)
+        # Preserve math symbols as LaTeX before post-processing strips them
+        raw_page_md = "\n".join(
+            _preserve_math_symbols(line) for line in raw_page_md.split("\n")
+        )
         clean_page_md = post.process(raw_page_md)
 
         if clean_page_md.strip():

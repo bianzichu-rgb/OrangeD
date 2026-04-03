@@ -129,6 +129,72 @@ class TestAnalyse:
         result = analyse_markdown("")
         assert result.total_lines == 0 or result.total_lines >= 0
 
+    # ─── New document type categories ────────────────────────────────────────
+
+    def test_classify_abstract(self):
+        from oranged.analyse import analyse_markdown
+        md = "# Abstract\n\nThis paper presents a novel approach to document extraction."
+        result = analyse_markdown(md)
+        cats = [s.category for s in result.sections]
+        assert "ABSTRACT" in cats
+
+    def test_classify_methodology(self):
+        from oranged.analyse import analyse_markdown
+        md = "# Methodology\n\nWe collected a dataset of 500 PDFs.\n\n# Results\n\nOur model achieves 95% accuracy."
+        result = analyse_markdown(md)
+        cats = [s.category for s in result.sections]
+        assert "METHODOLOGY" in cats
+
+    def test_classify_math(self):
+        from oranged.analyse import analyse_markdown
+        md = "# Theorem 3.1\n\nLet f(x) be a continuous function on [a,b]."
+        result = analyse_markdown(md)
+        cats = [s.category for s in result.sections]
+        assert "MATH_FORMULA" in cats
+
+    def test_classify_teaching(self):
+        from oranged.analyse import analyse_markdown
+        md = "# Syllabus\n\nThis course covers linear algebra.\n\n# Assessment\n\nHomework 40%, exam 60%."
+        result = analyse_markdown(md)
+        cats = [s.category for s in result.sections]
+        assert "TEACHING" in cats
+
+    def test_classify_teaching_zh(self):
+        from oranged.analyse import analyse_markdown
+        md = "# 教学目标\n\n掌握微积分基本概念。\n\n# 教学过程\n\n第一课时：极限。"
+        result = analyse_markdown(md)
+        cats = [s.category for s in result.sections]
+        assert "TEACHING" in cats
+
+
+# ─── extract.py: Math formula preservation ───────────────────────────────────
+
+class TestMathPreservation:
+    def test_has_math_content(self):
+        from oranged.extract import _has_math_content
+        assert _has_math_content("f(x) = ∫ g(x) dx")
+        assert _has_math_content("α + β = γ")
+        assert not _has_math_content("Normal text without math")
+
+    def test_preserve_math_symbols(self):
+        from oranged.extract import _preserve_math_symbols
+        result = _preserve_math_symbols("α + β = γ")
+        assert r"\alpha" in result
+        assert r"\beta" in result
+        assert r"\gamma" in result
+
+    def test_existing_latex_unchanged(self):
+        from oranged.extract import _preserve_math_symbols
+        original = "The equation $E = mc^2$ is famous"
+        result = _preserve_math_symbols(original)
+        assert result == original
+
+    def test_no_math_unchanged(self):
+        from oranged.extract import _preserve_math_symbols
+        original = "This is plain text without any formulas"
+        result = _preserve_math_symbols(original)
+        assert result == original
+
 
 # ─── router.py ───────────────────────────────────────────────────────────────
 
@@ -171,6 +237,27 @@ class TestJudge5D:
     def test_pass_threshold(self):
         from oranged.judge import PASS_THRESHOLD
         assert PASS_THRESHOLD == 0.70
+
+    def test_academic_paper_scoring(self):
+        from oranged.judge import Judge5D
+        md = (
+            "# Abstract\n\nThis paper presents a novel method.\n\n"
+            "## Introduction\n\nPrior work has shown...\n\n"
+            "## Methodology\n\nWe collected 500 samples.\n\n"
+            "## Results\n\nOur approach achieves 95% accuracy.\n\n"
+            "## Conclusion\n\nWe demonstrated that...\n"
+        )
+        report = Judge5D().evaluate(md, page_count=8)
+        assert report.overall_score >= 0.7
+        assert report.passed is True
+
+    def test_new_partition_weights_exist(self):
+        from oranged.judge import PARTITION_WEIGHTS
+        for cat in ("ABSTRACT", "METHODOLOGY", "MATH_FORMULA", "TEACHING"):
+            assert cat in PARTITION_WEIGHTS, f"Missing weight for {cat}"
+            w = PARTITION_WEIGHTS[cat]
+            total = sum(w.values())
+            assert abs(total - 1.0) < 0.01, f"Weights for {cat} sum to {total}, expected 1.0"
 
 
 # ─── adapters ────────────────────────────────────────────────────────────────
