@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "orangeD"
-version = "0.1.0"
+version = "0.2.0"
 description = "Hybrid intelligent PDF-to-Markdown pipeline with strategy routing, multi-OCR adapters, and 5-dimensional quality judge"
 readme = "README.md"
 license = {text = "Apache-2.0"}

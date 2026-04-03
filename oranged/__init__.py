@@ -5,7 +5,7 @@ Native-first extraction with smart OCR/VLM fallback routing,
 5-dimensional quality judge, and semantic document classification.
 """
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 
 from oranged.extract import extract_pdf
 from oranged.analyse import analyse_markdown
